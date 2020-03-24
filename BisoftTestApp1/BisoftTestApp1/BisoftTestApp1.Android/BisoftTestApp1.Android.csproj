@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA09D338-2BA0-442F-9469-0EEE5EB48126}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BisoftTestApp1.Droid</RootNamespace>
+    <AssemblyName>BisoftTestApp1.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.68.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.5.0.356</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\ServiceReference1.ACAction.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ACOilType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ACReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ACReportGa.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ACReportGasLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.BisoftProgramUpdate.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.BisoftWeekEmail.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSale.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSaleFlowGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSaleLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSaleLogDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSaleModuleFlow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSaleModuleFlowRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesMaintenanceBeg.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesMaintenanceForm.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesModule.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesModuleDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesModuleOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesModuleOfficeResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesModuleOfficeType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CarPreSalesProtocol.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CBRprovider.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CBRProviderOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Company.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyCleanSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyEmployeeGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyEmployeeGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyImage.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyRegion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CompanyVehicleBrand.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CQReportTaskRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRAnalysisFault.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRAttatchedFile.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRFinalDecisionHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRFollowUpHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRLogMeasureReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRLogType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRMeasureReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRModule.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRModuleEmailNotification.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRModuleEmailNotificationReceiver.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRModulesOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRPositiveDepartmentTask.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRPositiveGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRPositiveGroupQuestion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRStatusEmailNotification.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CRStatusOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerPositiveGrade.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerPositiveReportRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerReportImprovment.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.CustomerReportPositive.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmailContact.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmailSent.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmailSettingsOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Employee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsErSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsIBSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsIRSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsKASetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsKKSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsTASetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeAssSkillsUASetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeDocType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeEducation.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeManualPartDoc.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeePosition.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeePositionCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EmployeeWorkExperience.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EnviromentalReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERActionPlan.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERActionPlanERAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERActionPlanERHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERFinalDecisionHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERImprovment.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERImprovmentERAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERImprovmentERHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERImprovmentResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERLogType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERModule.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERModuleOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.EROwnMeasure.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERReportMeasure.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERStatusEmailNotification.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ERStatusOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUp.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpDiagram.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpEmployeePermission.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpLargeDiagramGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpLargeDiagramGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpOfficeLargeDiagram.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpViewGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.FollowUpViewGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ICErrorCode.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ICErrorCodeGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ICErrorCodeMainGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ILoginService.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportFinalDecision.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportIncident.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportInjuryType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportLocation.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportOutsider.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportVictum.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.IncidentReportWorkTask.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeLogRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeLogRowCode.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeLogRowFile.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeSubGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlOfficeVehicleBrandGoal.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlTemplate.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlTemplateGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlTemplateRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.InternalControlTemplateSubGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Manual.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualAdminOfficeConnection.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualDocumentCategory.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualDocumentPDFCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualDocumentTemplateCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualOfficeFastLink.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPart.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentFollowUp.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLogAttachedFile.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLogAttachedLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLogEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLogFollowUp.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentLogImprovement.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentPlan.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentPlanAttachedFile.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentPlanEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartDocumentPlanFollowUp.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartSuggestion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartSuggestionDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartTemplate.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartTemplateDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualPartVersion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualRadDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualSuggestion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualTemplate.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ManualTemplateResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Module.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModuleCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModuleEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModuleOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModulePart.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModulePartCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModulePartEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ModulePartOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Office.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartment.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentTask.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentTaskGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentTaskGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentTaskGroupVersion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentTaskVersion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeDepartmentVersion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeInternalRevPlaningSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeKeyCabinet.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeManagementReviewSetting.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeManualDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeParking.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeSafetyEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeVehicleBrandResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.OfficeWebLink.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Property.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyControlDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyControlLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyInspectionDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyInspectionLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyLogType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyMaintenanceDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyMaintenanceLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyManualPartDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyProduct.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyProductType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertySettingsOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.PropertyStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRActionPlan.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRActionPlanQRAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRActionPlanQRHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRAnalysisHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRAttachedFile.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRCausedBy.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRFinalDecisionHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImportTaskExternalSystem.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImprovementCRHeader.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImprovment.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImprovmentDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImprovmentResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRImprovmentTask.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRLogType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRModule.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRModuleEmailNotification.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRModuleEmailNotificationReceiver.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRModuleOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QROfficeGoal.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QROwnMeasure.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRReportMeasure.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRResponsible.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRStatusEmailNotification.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QRStatusOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.QualityReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisCompanyRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisEffect.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisOfficeLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisOfficeLogImprovement.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisOfficeLogRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisProbability.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisSubGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.RiskAnalysisSubGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Support.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedArea.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAreaRole.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsER.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsIB.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsIR.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsKA.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsKK.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsTA.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedAssessmentSkillsUA.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedDocumentReview.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedERSamplingCar.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedJointInfoEducation.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedJointInfoEducationParticipant.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedManagementReview381.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedManagementReview381Employees.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedOfficeArea.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedOfficeAreaEmployee.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.SwedPowerOfAttorneyER.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.Tool.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolBorrowed.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibration20MeterDistance.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationACWaeco.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationBreaktesterOptimo.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationCircumference.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationDocumentReport.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationDocumentReportVersion.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationForm.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationFourGasMeterHexanPro.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationFourGasMeterPropanPro.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationLeakFinder.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationLightControlPro.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationMethod.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationPressureTester.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrationType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCalibrator.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolCostOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolDepartment.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolDepartmentPlace.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolDepartmentPlaceLocation.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolGroup.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolGroupInventory.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolGroupInventoryLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolGroupInventoryLogRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolGroupRow.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolLogType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceLog.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceRutine.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceRutineCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceRutineDeviant.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceRutineOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolMaintenanceType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolManualPartDocument.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolManufacturer.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolProduct.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolProductPriceOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolProductType.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolReplacing.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolSettingsOffice.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolStatu.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolVWPricesCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.ToolWebLinkCompany.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.VehicleBrand.datasource" />
+    <None Include="Properties\DataSources\ServiceReference1.VehicleCompany.datasource" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BisoftTestApp1\BisoftTestApp1.csproj">
+      <Project>{04B238FE-57B9-40DF-BA64-1310E68594ED}</Project>
+      <Name>BisoftTestApp1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bisoft1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

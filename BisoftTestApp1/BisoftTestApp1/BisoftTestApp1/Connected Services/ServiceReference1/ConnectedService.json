@@ -1,0 +1,55 @@
+﻿{
+  "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
+  "Version": "15.0.31022.994",
+  "GettingStartedDocument": {
+    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
+  },
+  "ExtendedData": {
+    "inputs": [
+      "http://www.bisoftextsystems.se:8080/"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference1"
+    ],
+    "references": [
+      "SkiaSharp, {SkiaSharp, 1.68.1.1}",
+      "SkiaSharp.Views.Forms, {SkiaSharp.Views.Forms, 1.68.1.1}",
+      "System.Buffers, {System.Buffers, 4.4.0}",
+      "System.IO, {System.IO, 4.3.0}",
+      "System.IO.FileSystem.Primitives, {System.IO.FileSystem.Primitives, 4.3.0}",
+      "System.IO.UnmanagedMemoryStream, {System.IO.UnmanagedMemoryStream, 4.3.0}",
+      "System.Memory, {System.Memory, 4.5.3}",
+      "System.Numerics.Vectors, {System.Numerics.Vectors, 4.5.0}",
+      "System.Reflection, {System.Reflection, 4.3.0}",
+      "System.Reflection.DispatchProxy, {System.Reflection.DispatchProxy, 4.5.0}",
+      "System.Reflection.Primitives, {System.Reflection.Primitives, 4.3.0}",
+      "System.Runtime, {System.Runtime, 4.3.0}",
+      "System.Runtime.CompilerServices.Unsafe, {System.Runtime.CompilerServices.Unsafe, 4.5.2}",
+      "System.Runtime.Handles, {System.Runtime.Handles, 4.3.0}",
+      "System.Runtime.InteropServices, {System.Runtime.InteropServices, 4.3.0}",
+      "System.Security.AccessControl, {System.Security.AccessControl, 4.5.0}",
+      "System.Security.Cryptography.Xml, {System.Security.Cryptography.Xml, 4.5.0}",
+      "System.Security.Permissions, {System.Security.Permissions, 4.5.0}",
+      "System.Security.Principal.Windows, {System.Security.Principal.Windows, 4.5.0}",
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.7.0}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.7.0}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.7.0}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.7.0}",
+      "System.Text.Encoding, {System.Text.Encoding, 4.3.0}",
+      "System.Threading.Tasks, {System.Threading.Tasks, 4.3.0}",
+      "Xamarin.Essentials, {Xamarin.Essentials, 1.5.1}",
+      "Xamarin.Forms.Core, {Xamarin.Forms, 4.5.0.356}",
+      "Xamarin.Forms.Platform, {Xamarin.Forms, 4.5.0.356}",
+      "Xamarin.Forms.Xaml, {Xamarin.Forms, 4.5.0.356}"
+    ],
+    "sync": true,
+    "targetFramework": "netstandard2.0",
+    "typeReuseMode": "All"
+  }
+}

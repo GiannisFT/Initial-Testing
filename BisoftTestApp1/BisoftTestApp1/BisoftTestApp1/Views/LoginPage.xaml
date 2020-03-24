@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:data="clr-namespace:BisoftTestApp1.ViewModels.Login"
+             mc:Ignorable="d"
+             x:Class="BisoftTestApp1.Views.LoginPage" Shell.FlyoutBehavior="Disabled" 
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Title="Login" Shell.PresentationMode="ModalAnimated">
+    <ContentPage.BindingContext>
+        <data:LoginPageVM/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <!--<skiaforms:SKCanvasView x:Name="canvasView" PaintSurface="OnCanvasViewPaintSurface"/>-->
+        <StackLayout>
+
+            <StackLayout>
+
+                <Image Source="bisoft1.png" Aspect="AspectFit" HorizontalOptions="Fill" IsTabStop="False" Margin="10,0" WidthRequest="500" />
+                <Entry Placeholder="Ucid" x:Name="txt_ucid" Text="{Binding Ucid}" HorizontalOptions="EndAndExpand"></Entry>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Entry Placeholder="Username" x:Name="txt_username" Text="{Binding Username}"></Entry>
+                <Entry Placeholder="Password" IsPassword="True" x:Name="txt_password" Text="{Binding Password}"></Entry>
+                <Button Text="LOGIN" x:Name="btn_login" Command="{Binding LoginCommand}"></Button>
+                <Label Text="{Binding EmployeeName}" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Forgot password?" x:Name="btn_resetpword" Style="{d:DynamicResource btn_forgotStyle}" HorizontalOptions="End" Margin="0,0,20,20" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,17 @@
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.AssemblyInfoInputs.cache
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.AssemblyInfo.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.dll
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\ref\BisoftTestApp1.dll
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.pdb
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csprojAssemblyReference.cache
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\BisoftTestApp1.deps.json
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\BisoftTestApp1.dll
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\ref\BisoftTestApp1.dll
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\BisoftTestApp1.pdb
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\ShellNav.xaml.g.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\ControlPage.xaml.g.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\CarPresalesMaintenance.xaml.g.cs
+C:\Users\Giannis F Tsouri\source\repos\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\Maintenance.xaml.g.cs
