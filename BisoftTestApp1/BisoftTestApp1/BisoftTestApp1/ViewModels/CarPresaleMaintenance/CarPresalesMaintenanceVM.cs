@@ -10,6 +10,8 @@ using Xamarin.Essentials;
 using BisoftTestApp1.ViewModels.Login;
 using System.Collections.ObjectModel;
 using BisoftTestApp1.Classes;
+using BisoftTestApp1.Views;
+using BisoftTestApp1.ViewModels.MaintenanceBegVM;
 
 namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
 {
@@ -39,6 +41,7 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
             }
         }
 
+      
         private ObservableCollection<Office> allOffices;
         public ObservableCollection<Office> AllOffices
         {
@@ -69,14 +72,31 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
             }
         }
 
+        private CarPresalesMaintenance selectedMaintenance;
+        public CarPresalesMaintenance SelectedMaintenance
+        {
+            get { return selectedMaintenance; }
+            set
+            {
+                if (selectedMaintenance == value)
+                    return;
+                selectedMaintenance = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("SelectedMaintenance"));
+                Collection_SelectedMaintenance();
+            }
+        }
+        #region Preferences
+
         string ucid = Preferences.Get("UcidValue", null);
         string uname = Preferences.Get("UsernameValue", null);
         string pword = Preferences.Get("PasswordValue", null);
         int offId = Preferences.Get("OfficeIdValue", 0);
         int empId = Preferences.Get("EmployeeIdValue", 0);
         int companyId = Preferences.Get("CompanyId", 0);
-
+        string employeeName = Preferences.Get("EmpNameValue", null);
         
+        #endregion
+
         #endregion
 
         #region Constructors
@@ -85,13 +105,10 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
         {
             GetPresalesMaintenance = new HelpClasses.DelegateCommand(GetCarPresalesMaintenance, CanTryGetCarPresalesMaintenance);
             GetOffices();
-            
         }
         #endregion
 
         #region Methods
-
-
 
         public void GetCarPresalesMaintenance(object param)
         {
@@ -110,7 +127,6 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
                 cPM.VehicleModel = row.VehicelModel;
                 cPM.VehicleBrandId = row.VehicleBrandId;
                 cPM.VehicleBrandName = row.VehicleBrandName;
-                cPM.Id = row.CarPreSaleFlowGroupData.Id;
                 cPM.Color = row.CarPreSaleFlowGroupData.Color;
                 cPM.Name = row.CarPreSaleFlowGroupData.Name;
                 cPM.Fname = row.MaintenanceResponsible.FName;
@@ -138,14 +154,20 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
                 AllOffices.Add(off);
             }
         }
-
-
-        public void SaveMaintenanceBeg()
+        public void Collection_SelectedMaintenance()
         {
-            CarPreSalesMaintenaceBegData begdata = new CarPreSalesMaintenaceBegData();
-            begdata.
+            foreach (var item in AllMaintenance)
+            {
+                if (SelectedMaintenance.Id == item.Id)
+                {
+                    MaintenanceBegVM.MaintenanceBegVM context = new MaintenanceBegVM.MaintenanceBegVM(SelectedMaintenance.Id);
+                    MaintenanceBegForm form = new MaintenanceBegForm();
+                    form.BindingContext = context;
+                    ShellNav.Current.Navigation.PushAsync(form);
+                    
+                }
+            }
         }
-        
         #endregion
     }
 }

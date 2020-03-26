@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {}
+    "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
+    "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj",
         "projectName": "BisoftTestApp1",
-        "projectPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj",
+        "projectPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj",
         "packagesPath": "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\obj\\",
+        "outputPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

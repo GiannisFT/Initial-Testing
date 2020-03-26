@@ -1579,11 +1579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\BisoftTestApp1.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\BisoftTestApp1.iOS.csproj",
       "projectName": "BisoftTestApp1.iOS",
-      "projectPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\BisoftTestApp1.iOS.csproj",
+      "projectPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\BisoftTestApp1.iOS.csproj",
       "packagesPath": "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1604,8 +1604,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
-              "projectPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj"
+            "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
+              "projectPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj"
             }
           }
         }

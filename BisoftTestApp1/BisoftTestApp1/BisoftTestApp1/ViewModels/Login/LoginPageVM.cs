@@ -64,7 +64,7 @@ namespace BisoftTestApp1.ViewModels.Login
 
         #endregion
 
-        #region UserName
+        #region EmployeeName
 
         private string _employeeName;
         public string EmployeeName

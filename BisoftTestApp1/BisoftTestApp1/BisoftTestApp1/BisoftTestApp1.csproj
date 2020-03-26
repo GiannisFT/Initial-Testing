@@ -29,11 +29,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\CarPresalesMaintenance.xaml.cs">
-      <DependentUpon>CarPresalesMaintenance.xaml</DependentUpon>
+    <Compile Update="Views\CarPresalesMaintenancePage.xaml.cs">
+      <DependentUpon>CarPresalesMaintenancePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MaintenanceBegForm.xaml.cs">
+      <DependentUpon>MaintenanceBegForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -41,13 +44,10 @@
     <EmbeddedResource Update="ShellNav.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ControlPage.xaml">
+    <EmbeddedResource Update="Views\CarPresalesMaintenancePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CarPresalesMaintenance.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Maintenance.xaml">
+    <EmbeddedResource Update="Views\MaintenanceBegForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

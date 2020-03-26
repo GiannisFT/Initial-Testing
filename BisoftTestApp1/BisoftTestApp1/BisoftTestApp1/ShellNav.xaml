@@ -14,8 +14,8 @@
         <ShellContent ContentTemplate="{DataTemplate views:LoginPage}"/>
     </TabBar>
     <FlyoutItem Route="main" FlyoutDisplayOptions="AsMultipleItems" IsTabStop="False">
-        <ShellContent Title="Car Presales Maintenance" Route="presale_maint" ContentTemplate="{DataTemplate views:CarPresalesMaintenance}" IsTabStop="False" />
-        <ShellContent Title="Control" Route="control" ContentTemplate="{DataTemplate views:ControlPage}" IsTabStop="False" />
+        <ShellContent Title="Car Presales Maintenance" Route="presale_maint" ContentTemplate="{DataTemplate views:CarPresalesMaintenancePage}" IsTabStop="False" />
+        <ShellContent IsTabStop="False" />
     </FlyoutItem>
     <MenuItem Text="Logout" Command="{Binding ExecuteLogout}">
     </MenuItem>

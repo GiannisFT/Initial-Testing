@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:data="clr-namespace:BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM"
+             mc:Ignorable="d"
+             x:Class="BisoftTestApp1.Views.CarPresalesMaintenancePage" Shell.TabBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <data:CarPresalesMaintenanceVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="Border">
+                <Setter Property="BackgroundColor" Value="{Binding Color}" />
+                <Setter Property="Padding" Value="1 1 1 1" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BorderColor="Silver" Margin="5,10,770,10" Padding="5" HorizontalOptions="Fill">
+            <Label x:Name="lbl_picker" Text="Välj Driftställe" FontSize="19">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                    </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+            <Picker x:Name="off_picker" Title="Välj Driftställe" ItemsSource="{Binding AllOffices}"
+                    ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedOffice}"
+                    IsVisible="False" SelectedIndexChanged="off_picker_SelectedIndexChanged">
+            </Picker>
+            <CollectionView x:Name="collection" ItemsSource="{Binding AllMaintenance}" 
+                            SelectionMode="Single" SelectedItem="{Binding SelectedMaintenance}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                    
+                            <Label Grid.Row="0"
+                                Grid.Column="0"
+                                Text="{Binding Name}" TextColor="White" Style="{StaticResource Border}"/>
+                            <Label Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{Binding RegNr}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding VehicleBrandName}" />
+                            <Label Grid.Row="2"
+                                Grid.Column="1"
+                                Text="{Binding VehicleModel}"/>
+                            <Label Text="Ansvarig" Grid.Row="0" Grid.Column="2"/>
+                            <Label Grid.Row="1"
+                                Grid.Column="2"
+                                Text="{Binding FullName}"/>
+                            <Label Text="Parkering" Grid.Row="0" Grid.Column="3"/>
+                            <Label Grid.Row="1"
+                                Grid.Column="3"
+                                Text="{Binding Parking}" FontAttributes="Bold"/>
+                            <Label Text="Nyckelskåp" Grid.Row="0" Grid.Column="4"/>
+                            <Label Grid.Row="1"
+                                Grid.Column="4"
+                                Text="{Binding KeyCabinet}" FontAttributes="Bold"/>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

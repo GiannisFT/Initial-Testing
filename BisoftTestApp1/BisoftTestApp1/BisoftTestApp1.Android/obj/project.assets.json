@@ -2395,11 +2395,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\BisoftTestApp1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\BisoftTestApp1.Android.csproj",
       "projectName": "BisoftTestApp1.Android",
-      "projectPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\BisoftTestApp1.Android.csproj",
+      "projectPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\BisoftTestApp1.Android.csproj",
       "packagesPath": "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\obj\\",
+      "outputPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2420,8 +2420,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
-              "projectPath": "C:\\Users\\Giannis F Tsouri\\source\\repos\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj"
+            "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj": {
+              "projectPath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj"
             }
           }
         }
