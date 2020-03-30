@@ -11,7 +11,7 @@ using BisoftTestApp1.ViewModels.Login;
 using System.Collections.ObjectModel;
 using BisoftTestApp1.Classes;
 using BisoftTestApp1.Views;
-using BisoftTestApp1.ViewModels.MaintenanceBegVM;
+using BisoftTestApp1.ViewModels.Maintenance;
 
 namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
 {
@@ -160,7 +160,7 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
             {
                 if (SelectedMaintenance.Id == item.Id)
                 {
-                    MaintenanceBegVM.MaintenanceBegVM context = new MaintenanceBegVM.MaintenanceBegVM(SelectedMaintenance.Id);
+                    Maintenance.MaintenanceBegVM context = new Maintenance.MaintenanceBegVM(SelectedMaintenance.Id);
                     MaintenanceBegForm form = new MaintenanceBegForm();
                     form.BindingContext = context;
                     ShellNav.Current.Navigation.PushAsync(form);

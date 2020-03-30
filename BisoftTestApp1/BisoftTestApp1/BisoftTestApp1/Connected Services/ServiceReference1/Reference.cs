@@ -121,6 +121,10 @@ namespace ServiceReference1
         
         private ServiceReference1.InternalControlOfficeRowData[] ControlRowsField;
         
+        private bool HasEmployeeField;
+        
+        private bool HasVehicleBrandField;
+        
         private int IdField;
         
         private string NameField;
@@ -167,6 +171,32 @@ namespace ServiceReference1
             set
             {
                 this.ControlRowsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasEmployee
+        {
+            get
+            {
+                return this.HasEmployeeField;
+            }
+            set
+            {
+                this.HasEmployeeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasVehicleBrand
+        {
+            get
+            {
+                return this.HasVehicleBrandField;
+            }
+            set
+            {
+                this.HasVehicleBrandField = value;
             }
         }
         
@@ -242,9 +272,24 @@ namespace ServiceReference1
     public partial class InternalControlOfficeRowData : object
     {
         
+        private string GroupField;
+        
         private int IdField;
         
         private string RowTextField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Group
+        {
+            get
+            {
+                return this.GroupField;
+            }
+            set
+            {
+                this.GroupField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id
@@ -568,6 +613,147 @@ namespace ServiceReference1
             set
             {
                 this.TextField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeMainGroupData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICErrorCodeMainGroupData : object
+    {
+        
+        private ServiceReference1.ICErrorCodeGroupData[] GroupsField;
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeGroupData[] Groups
+        {
+            get
+            {
+                return this.GroupsField;
+            }
+            set
+            {
+                this.GroupsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeGroupData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICErrorCodeGroupData : object
+    {
+        
+        private ServiceReference1.ICErrorCodeData[] CodesField;
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeData[] Codes
+        {
+            get
+            {
+                return this.CodesField;
+            }
+            set
+            {
+                this.CodesField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICErrorCodeData : object
+    {
+        
+        private string CodeField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code
+        {
+            get
+            {
+                return this.CodeField;
+            }
+            set
+            {
+                this.CodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -1020,16 +1206,62 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleBrandData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class VehicleBrandData : object
+    {
+        
+        private string CodeField;
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code
+        {
+            get
+            {
+                return this.CodeField;
+            }
+            set
+            {
+                this.CodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoginEmployee", ReplyAction="http://tempuri.org/IService1/LoginEmployeeResponse")]
         ServiceReference1.EmployeeData LoginEmployee(string username, string password, string ucid);
@@ -1067,6 +1299,12 @@ namespace ServiceReference1
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControlResponse")]
         System.Threading.Tasks.Task<string> DeleteOfficeInternalControlPerformControlAsync(int logId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetICErrorCodes", ReplyAction="http://tempuri.org/IService1/GetICErrorCodesResponse")]
+        ServiceReference1.ICErrorCodeMainGroupData[] GetICErrorCodes(string username, string password, string ucid, int companyId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetICErrorCodes", ReplyAction="http://tempuri.org/IService1/GetICErrorCodesResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.ICErrorCodeMainGroupData[]> GetICErrorCodesAsync(string username, string password, string ucid, int companyId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficesByCompanyId", ReplyAction="http://tempuri.org/IService1/GetOfficesByCompanyIdResponse")]
         ServiceReference1.OfficeData[] GetOfficesByCompanyId(string username, string password, string ucid, int companyId);
         
@@ -1090,6 +1328,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBeg", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBegResponse")]
         System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyVehicleBrands", ReplyAction="http://tempuri.org/IService1/GetCompanyVehicleBrandsResponse")]
+        ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyVehicleBrands", ReplyAction="http://tempuri.org/IService1/GetCompanyVehicleBrandsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.VehicleBrandData[]> GetCompanyVehicleBrandsAsync(string username, string password, string ucid, int companyId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -1140,16 +1384,6 @@ namespace ServiceReference1
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
-        }
-        
-        public string GetData(int value)
-        {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value)
-        {
-            return base.Channel.GetDataAsync(value);
         }
         
         public ServiceReference1.EmployeeData LoginEmployee(string username, string password, string ucid)
@@ -1212,6 +1446,16 @@ namespace ServiceReference1
             return base.Channel.DeleteOfficeInternalControlPerformControlAsync(logId);
         }
         
+        public ServiceReference1.ICErrorCodeMainGroupData[] GetICErrorCodes(string username, string password, string ucid, int companyId)
+        {
+            return base.Channel.GetICErrorCodes(username, password, ucid, companyId);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.ICErrorCodeMainGroupData[]> GetICErrorCodesAsync(string username, string password, string ucid, int companyId)
+        {
+            return base.Channel.GetICErrorCodesAsync(username, password, ucid, companyId);
+        }
+        
         public ServiceReference1.OfficeData[] GetOfficesByCompanyId(string username, string password, string ucid, int companyId)
         {
             return base.Channel.GetOfficesByCompanyId(username, password, ucid, companyId);
@@ -1250,6 +1494,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata)
         {
             return base.Channel.InsertCarPreSalesmaintenanceBegAsync(username, password, ucid, begdata);
+        }
+        
+        public ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId)
+        {
+            return base.Channel.GetCompanyVehicleBrands(username, password, ucid, companyId);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.VehicleBrandData[]> GetCompanyVehicleBrandsAsync(string username, string password, string ucid, int companyId)
+        {
+            return base.Channel.GetCompanyVehicleBrandsAsync(username, password, ucid, companyId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

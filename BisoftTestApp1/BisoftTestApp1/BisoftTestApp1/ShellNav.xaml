@@ -7,15 +7,12 @@
              xmlns:views="clr-namespace:BisoftTestApp1.Views"
              x:Class="BisoftTestApp1.ShellNav">
     
-    <!--<FlyoutItem>
-        <ShellContent Title="Maintenance" ContentTemplate="{DataTemplate views:Maintenance}"/>
-    </FlyoutItem>-->
     <TabBar Route="login">
         <ShellContent ContentTemplate="{DataTemplate views:LoginPage}"/>
     </TabBar>
     <FlyoutItem Route="main" FlyoutDisplayOptions="AsMultipleItems" IsTabStop="False">
         <ShellContent Title="Car Presales Maintenance" Route="presale_maint" ContentTemplate="{DataTemplate views:CarPresalesMaintenancePage}" IsTabStop="False" />
-        <ShellContent IsTabStop="False" />
+        <ShellContent Title="Lager" Route="maintenance_lager" ContentTemplate="{DataTemplate views:MaintenanceLagerForm}" IsTabStop="False"/>
     </FlyoutItem>
     <MenuItem Text="Logout" Command="{Binding ExecuteLogout}">
     </MenuItem>

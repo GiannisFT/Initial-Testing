@@ -23,6 +23,7 @@ namespace BisoftTestApp1
             routes.Add("login", typeof(LoginPage));
             routes.Add("presale_maint", typeof(CarPresalesMaintenancePage));
             routes.Add("maintenance_beg", typeof(MaintenanceBegForm));
+            routes.Add("maintenance_lager", typeof(MaintenanceLagerForm));
 
             foreach (var item in routes)
             {

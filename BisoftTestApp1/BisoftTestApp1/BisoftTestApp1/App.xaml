@@ -14,7 +14,24 @@
                 <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="TextColor" Value="DarkSlateBlue"/>
             </Style>
-            
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="2"/>
+                <Setter Property="ColumnSpacing" Value="2"/>
+            </Style>
+            <Style TargetType="CheckBox">
+                <Setter Property="Scale" Value="2"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

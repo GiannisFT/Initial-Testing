@@ -21,7 +21,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Frame BorderColor="Silver" Margin="5,10,770,10" Padding="5" HorizontalOptions="Fill">
+            <Frame BorderColor="Silver" Margin="10,10,10,10" HorizontalOptions="Fill">
             <Label x:Name="lbl_picker" Text="Välj Driftställe" FontSize="19">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
@@ -37,7 +37,7 @@
                             SelectionMode="Single" SelectedItem="{Binding SelectedMaintenance}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="5">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />

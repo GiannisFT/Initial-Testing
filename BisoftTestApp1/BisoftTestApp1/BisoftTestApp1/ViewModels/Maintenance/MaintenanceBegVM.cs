@@ -12,7 +12,7 @@ using Xamarin.Forms;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
+namespace BisoftTestApp1.ViewModels.Maintenance
 {
     class MaintenanceBegVM : ViewModelBase
     {
@@ -370,11 +370,15 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
         #region Constructors
         public MaintenanceBegVM()
         {
-            //GearsCheckedColor = Color.Black;
+            
         }
         public MaintenanceBegVM(int carpresalesId)
         {
-            //GearsCheckedColor = Color.Black;
+            GearsCheckedColor = Color.Black;
+            CleanCheckedColor = Color.Black;
+            BatteryCheckedColor = Color.Black;
+            BrakesCheckedColor = Color.Black;
+            TyresCheckedColor = Color.Black;
             IniCarPreSalesId = carpresalesId;
             InsertBegCommand = new HelpClasses.DelegateCommand(TryInsertMaintenanceBegData, CanTryInsertMaintenanceBegData);
         }
@@ -425,7 +429,7 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
             else if (IsGearsNotOKChecked == true && string.IsNullOrWhiteSpace(Text_gears))
             {
                 isValid = false;
-                Application.Current.MainPage.DisplayAlert("", "Beskrivning få ej vara tomt!", "OK");
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
                 GearsCheckedColor = Color.Red;
             }
             else
@@ -444,7 +448,7 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
             else if (IsCleanNotOKChecked == true && string.IsNullOrWhiteSpace(Text_clean))
             {
                 isValid = false;
-                Application.Current.MainPage.DisplayAlert("", "Beskrivning få ej vara tomt!", "OK");
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
                 CleanCheckedColor = Color.Red;
             }
             else
@@ -463,7 +467,7 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
             else if (IsBatteryNotOKChecked == true && string.IsNullOrWhiteSpace(Text_battery))
             {
                 isValid = false;
-                Application.Current.MainPage.DisplayAlert("", "Beskrivning få ej vara tomt!", "OK");
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
                 BatteryCheckedColor = Color.Red;
             }
             else
@@ -482,7 +486,7 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
             else if (IsBrakesNotOKChecked == true && string.IsNullOrWhiteSpace(Text_brakes))
             {
                 isValid = false;
-                Application.Current.MainPage.DisplayAlert("", "Beskrivning få ej vara tomt!", "OK");
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
                 BrakesCheckedColor = Color.Red;
             }
             else
@@ -501,7 +505,7 @@ namespace BisoftTestApp1.ViewModels.MaintenanceBegVM
             else if (IsTyresNotOKChecked == true && string.IsNullOrWhiteSpace(Text_tyres))
             {
                 isValid = false;
-                Application.Current.MainPage.DisplayAlert("", "Beskrivning få ej vara tomt!", "OK");
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
                 TyresCheckedColor = Color.Red;
             }
             else
