@@ -24,6 +24,7 @@ namespace BisoftTestApp1
             routes.Add("presale_maint", typeof(CarPresalesMaintenancePage));
             routes.Add("maintenance_beg", typeof(MaintenanceBegForm));
             routes.Add("maintenance_lager", typeof(MaintenanceLagerForm));
+            routes.Add("maintenance_standard", typeof(MaintenanceStandardForm));
 
             foreach (var item in routes)
             {
@@ -31,6 +32,6 @@ namespace BisoftTestApp1
             }
         }
 
-        public ICommand ExecuteLogout => new Command(async () => await GoToAsync("login"));
+        public ICommand ExecuteLogout => new Command(async () => await Navigation.PushAsync(new LoginPage()));
     }
 }

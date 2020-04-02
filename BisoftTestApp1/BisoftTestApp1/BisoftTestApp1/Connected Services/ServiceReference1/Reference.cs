@@ -119,6 +119,10 @@ namespace ServiceReference1
         
         private string AmountUnitField;
         
+        private int BudgetThisMonthField;
+        
+        private int BudgetThisYearField;
+        
         private ServiceReference1.InternalControlOfficeRowData[] ControlRowsField;
         
         private bool HasEmployeeField;
@@ -126,6 +130,8 @@ namespace ServiceReference1
         private bool HasVehicleBrandField;
         
         private int IdField;
+        
+        private ServiceReference1.InternalControlOfficeLogData[] LogsField;
         
         private string NameField;
         
@@ -158,6 +164,32 @@ namespace ServiceReference1
             set
             {
                 this.AmountUnitField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BudgetThisMonth
+        {
+            get
+            {
+                return this.BudgetThisMonthField;
+            }
+            set
+            {
+                this.BudgetThisMonthField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BudgetThisYear
+        {
+            get
+            {
+                return this.BudgetThisYearField;
+            }
+            set
+            {
+                this.BudgetThisYearField = value;
             }
         }
         
@@ -210,6 +242,19 @@ namespace ServiceReference1
             set
             {
                 this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.InternalControlOfficeLogData[] Logs
+        {
+            get
+            {
+                return this.LogsField;
+            }
+            set
+            {
+                this.LogsField = value;
             }
         }
         
@@ -334,7 +379,11 @@ namespace ServiceReference1
         
         private bool DeletedField;
         
+        private ServiceReference1.EmployeeData EmployeeField;
+        
         private System.Nullable<int> IdField;
+        
+        private ServiceReference1.InternalControlOfficeData InternalControlOfficeField;
         
         private int InternalControlOfficeIdField;
         
@@ -343,6 +392,8 @@ namespace ServiceReference1
         private string RegNrField;
         
         private ServiceReference1.InternalControlOfficeLogRowData[] RowsField;
+        
+        private ServiceReference1.VehicleBrandData VehicleBrandField;
         
         private System.Nullable<int> VehicleBrandIdField;
         
@@ -412,6 +463,19 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.EmployeeData Employee
+        {
+            get
+            {
+                return this.EmployeeField;
+            }
+            set
+            {
+                this.EmployeeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Id
         {
             get
@@ -421,6 +485,19 @@ namespace ServiceReference1
             set
             {
                 this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.InternalControlOfficeData InternalControlOffice
+        {
+            get
+            {
+                return this.InternalControlOfficeField;
+            }
+            set
+            {
+                this.InternalControlOfficeField = value;
             }
         }
         
@@ -477,6 +554,19 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.VehicleBrandData VehicleBrand
+        {
+            get
+            {
+                return this.VehicleBrandField;
+            }
+            set
+            {
+                this.VehicleBrandField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> VehicleBrandId
         {
             get
@@ -492,6 +582,58 @@ namespace ServiceReference1
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleBrandData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class VehicleBrandData : object
+    {
+        
+        private string CodeField;
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code
+        {
+            get
+            {
+                return this.CodeField;
+            }
+            set
+            {
+                this.CodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="InternalControlOfficeLogRowData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
     public partial class InternalControlOfficeLogRowData : object
     {
@@ -500,7 +642,15 @@ namespace ServiceReference1
         
         private bool DeletedField;
         
+        private ServiceReference1.ICErrorCodeData[] ErrorCodesField;
+        
+        private string GroupField;
+        
+        private string HelpTextField;
+        
         private System.Nullable<int> IdField;
+        
+        private ServiceReference1.ICOLogRowFileData[] ImageFilesField;
         
         private int InternalControlOfficeLogRowIdField;
         
@@ -539,6 +689,45 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeData[] ErrorCodes
+        {
+            get
+            {
+                return this.ErrorCodesField;
+            }
+            set
+            {
+                this.ErrorCodesField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Group
+        {
+            get
+            {
+                return this.GroupField;
+            }
+            set
+            {
+                this.GroupField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HelpText
+        {
+            get
+            {
+                return this.HelpTextField;
+            }
+            set
+            {
+                this.HelpTextField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Id
         {
             get
@@ -548,6 +737,19 @@ namespace ServiceReference1
             set
             {
                 this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICOLogRowFileData[] ImageFiles
+        {
+            get
+            {
+                return this.ImageFilesField;
+            }
+            set
+            {
+                this.ImageFilesField = value;
             }
         }
         
@@ -619,6 +821,177 @@ namespace ServiceReference1
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICErrorCodeData : object
+    {
+        
+        private string CodeField;
+        
+        private ServiceReference1.ICErrorCodeGroupData GroupField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code
+        {
+            get
+            {
+                return this.CodeField;
+            }
+            set
+            {
+                this.CodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeGroupData Group
+        {
+            get
+            {
+                return this.GroupField;
+            }
+            set
+            {
+                this.GroupField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICOLogRowFileData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICOLogRowFileData : object
+    {
+        
+        private string FileNameField;
+        
+        private string FilePathField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName
+        {
+            get
+            {
+                return this.FileNameField;
+            }
+            set
+            {
+                this.FileNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FilePath
+        {
+            get
+            {
+                return this.FilePathField;
+            }
+            set
+            {
+                this.FilePathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeGroupData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class ICErrorCodeGroupData : object
+    {
+        
+        private ServiceReference1.ICErrorCodeData[] CodesField;
+        
+        private int IdField;
+        
+        private ServiceReference1.ICErrorCodeMainGroupData MainGroupField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeData[] Codes
+        {
+            get
+            {
+                return this.CodesField;
+            }
+            set
+            {
+                this.CodesField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ICErrorCodeMainGroupData MainGroup
+        {
+            get
+            {
+                return this.MainGroupField;
+            }
+            set
+            {
+                this.MainGroupField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeMainGroupData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
     public partial class ICErrorCodeMainGroupData : object
     {
@@ -665,95 +1038,6 @@ namespace ServiceReference1
             set
             {
                 this.NameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeGroupData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
-    public partial class ICErrorCodeGroupData : object
-    {
-        
-        private ServiceReference1.ICErrorCodeData[] CodesField;
-        
-        private int IdField;
-        
-        private string NameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.ICErrorCodeData[] Codes
-        {
-            get
-            {
-                return this.CodesField;
-            }
-            set
-            {
-                this.CodesField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
-        {
-            get
-            {
-                return this.NameField;
-            }
-            set
-            {
-                this.NameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ICErrorCodeData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
-    public partial class ICErrorCodeData : object
-    {
-        
-        private string CodeField;
-        
-        private int IdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
             }
         }
     }
@@ -822,6 +1106,8 @@ namespace ServiceReference1
         
         private string KeyCabinetField;
         
+        private int MaintenanceFormIdField;
+        
         private ServiceReference1.EmployeeData MaintenanceResponsibleField;
         
         private string ParkingField;
@@ -870,6 +1156,19 @@ namespace ServiceReference1
             set
             {
                 this.KeyCabinetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaintenanceFormId
+        {
+            get
+            {
+                return this.MaintenanceFormIdField;
+            }
+            set
+            {
+                this.MaintenanceFormIdField = value;
             }
         }
         
@@ -1208,52 +1507,209 @@ namespace ServiceReference1
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleBrandData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
-    public partial class VehicleBrandData : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarPreSalesMaintenaceLagerData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class CarPreSalesMaintenaceLagerData : object
     {
         
-        private string CodeField;
+        private string BatteriCheckInfoField;
         
-        private int IdField;
+        private bool BatteriCheckOKField;
         
-        private string NameField;
+        private string BrakeCheckInfoField;
+        
+        private bool BrakeCheckOKField;
+        
+        private int CarPreSalesIdField;
+        
+        private int PerformedByIdField;
+        
+        private System.DateTime PerformedDateField;
+        
+        private string TireCheckInfoField;
+        
+        private bool TireCheckOKField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Code
+        public string BatteriCheckInfo
         {
             get
             {
-                return this.CodeField;
+                return this.BatteriCheckInfoField;
             }
             set
             {
-                this.CodeField = value;
+                this.BatteriCheckInfoField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
+        public bool BatteriCheckOK
         {
             get
             {
-                return this.IdField;
+                return this.BatteriCheckOKField;
             }
             set
             {
-                this.IdField = value;
+                this.BatteriCheckOKField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
+        public string BrakeCheckInfo
         {
             get
             {
-                return this.NameField;
+                return this.BrakeCheckInfoField;
             }
             set
             {
-                this.NameField = value;
+                this.BrakeCheckInfoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool BrakeCheckOK
+        {
+            get
+            {
+                return this.BrakeCheckOKField;
+            }
+            set
+            {
+                this.BrakeCheckOKField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarPreSalesId
+        {
+            get
+            {
+                return this.CarPreSalesIdField;
+            }
+            set
+            {
+                this.CarPreSalesIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PerformedById
+        {
+            get
+            {
+                return this.PerformedByIdField;
+            }
+            set
+            {
+                this.PerformedByIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PerformedDate
+        {
+            get
+            {
+                return this.PerformedDateField;
+            }
+            set
+            {
+                this.PerformedDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TireCheckInfo
+        {
+            get
+            {
+                return this.TireCheckInfoField;
+            }
+            set
+            {
+                this.TireCheckInfoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool TireCheckOK
+        {
+            get
+            {
+                return this.TireCheckOKField;
+            }
+            set
+            {
+                this.TireCheckOKField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarPreSalesMaintenaceStandardData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class CarPreSalesMaintenaceStandardData : object
+    {
+        
+        private int CarPreSalesIdField;
+        
+        private string DocPathField;
+        
+        private int PerformedByIdField;
+        
+        private System.DateTime PerformedDateField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarPreSalesId
+        {
+            get
+            {
+                return this.CarPreSalesIdField;
+            }
+            set
+            {
+                this.CarPreSalesIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DocPath
+        {
+            get
+            {
+                return this.DocPathField;
+            }
+            set
+            {
+                this.DocPathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PerformedById
+        {
+            get
+            {
+                return this.PerformedByIdField;
+            }
+            set
+            {
+                this.PerformedByIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PerformedDate
+        {
+            get
+            {
+                return this.PerformedDateField;
+            }
+            set
+            {
+                this.PerformedDateField = value;
             }
         }
     }
@@ -1281,17 +1737,29 @@ namespace ServiceReference1
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformControlResponse")]
         System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlPerformControlAsync(string username, string password, string ucid, int officeId, int officecontrolId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControlResponse")]
-        string InsertOfficeInternalControlPerformControl(ServiceReference1.InternalControlOfficeLogData officeLog);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControlResponse")]
+        ServiceReference1.InternalControlOfficeLogData GetOfficeInternalControlPerformedControl(string username, string password, string ucid, int controlLogId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControlResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlPerformedControlAsync(string username, string password, string ucid, int controlLogId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlLogs", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlLogsResponse")]
+        ServiceReference1.InternalControlOfficeData GetOfficeInternalControlLogs(string username, string password, string ucid, int officecontrolId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlLogs", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlLogsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlLogsAsync(string username, string password, string ucid, int officecontrolId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControlResponse")]
-        System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(ServiceReference1.InternalControlOfficeLogData officeLog);
+        string InsertOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControlResponse")]
+        System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControlResponse")]
-        string UpdateOfficeInternalControlPerformControl(ServiceReference1.InternalControlOfficeLogData officeLog);
+        string UpdateOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControlResponse")]
-        System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(ServiceReference1.InternalControlOfficeLogData officeLog);
+        System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControlResponse")]
         string DeleteOfficeInternalControlPerformControl(int logId);
@@ -1328,6 +1796,18 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBeg", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBegResponse")]
         System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLager", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLagerResponse")]
+        string InsertCarPreSalesmaintenanceLager(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLager", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLagerResponse")]
+        System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceLagerAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandard", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandardResponse")]
+        string InsertCarPreSalesmaintenanceStandard(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandard", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandardResponse")]
+        System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceStandardAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyVehicleBrands", ReplyAction="http://tempuri.org/IService1/GetCompanyVehicleBrandsResponse")]
         ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId);
@@ -1416,24 +1896,44 @@ namespace ServiceReference1
             return base.Channel.GetOfficeInternalControlPerformControlAsync(username, password, ucid, officeId, officecontrolId);
         }
         
-        public string InsertOfficeInternalControlPerformControl(ServiceReference1.InternalControlOfficeLogData officeLog)
+        public ServiceReference1.InternalControlOfficeLogData GetOfficeInternalControlPerformedControl(string username, string password, string ucid, int controlLogId)
         {
-            return base.Channel.InsertOfficeInternalControlPerformControl(officeLog);
+            return base.Channel.GetOfficeInternalControlPerformedControl(username, password, ucid, controlLogId);
         }
         
-        public System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(ServiceReference1.InternalControlOfficeLogData officeLog)
+        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlPerformedControlAsync(string username, string password, string ucid, int controlLogId)
         {
-            return base.Channel.InsertOfficeInternalControlPerformControlAsync(officeLog);
+            return base.Channel.GetOfficeInternalControlPerformedControlAsync(username, password, ucid, controlLogId);
         }
         
-        public string UpdateOfficeInternalControlPerformControl(ServiceReference1.InternalControlOfficeLogData officeLog)
+        public ServiceReference1.InternalControlOfficeData GetOfficeInternalControlLogs(string username, string password, string ucid, int officecontrolId)
         {
-            return base.Channel.UpdateOfficeInternalControlPerformControl(officeLog);
+            return base.Channel.GetOfficeInternalControlLogs(username, password, ucid, officecontrolId);
         }
         
-        public System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(ServiceReference1.InternalControlOfficeLogData officeLog)
+        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlLogsAsync(string username, string password, string ucid, int officecontrolId)
         {
-            return base.Channel.UpdateOfficeInternalControlPerformControlAsync(officeLog);
+            return base.Channel.GetOfficeInternalControlLogsAsync(username, password, ucid, officecontrolId);
+        }
+        
+        public string InsertOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        {
+            return base.Channel.InsertOfficeInternalControlPerformControl(username, password, ucid, officeLog);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        {
+            return base.Channel.InsertOfficeInternalControlPerformControlAsync(username, password, ucid, officeLog);
+        }
+        
+        public string UpdateOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        {
+            return base.Channel.UpdateOfficeInternalControlPerformControl(username, password, ucid, officeLog);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        {
+            return base.Channel.UpdateOfficeInternalControlPerformControlAsync(username, password, ucid, officeLog);
         }
         
         public string DeleteOfficeInternalControlPerformControl(int logId)
@@ -1494,6 +1994,26 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata)
         {
             return base.Channel.InsertCarPreSalesmaintenanceBegAsync(username, password, ucid, begdata);
+        }
+        
+        public string InsertCarPreSalesmaintenanceLager(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata)
+        {
+            return base.Channel.InsertCarPreSalesmaintenanceLager(username, password, ucid, lagerdata);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceLagerAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata)
+        {
+            return base.Channel.InsertCarPreSalesmaintenanceLagerAsync(username, password, ucid, lagerdata);
+        }
+        
+        public string InsertCarPreSalesmaintenanceStandard(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata)
+        {
+            return base.Channel.InsertCarPreSalesmaintenanceStandard(username, password, ucid, standarddata);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceStandardAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata)
+        {
+            return base.Channel.InsertCarPreSalesmaintenanceStandardAsync(username, password, ucid, standarddata);
         }
         
         public ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId)

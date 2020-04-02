@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using BisoftTestApp1.Classes;
 using BisoftTestApp1.Views;
 using BisoftTestApp1.ViewModels.Maintenance;
+using Xamarin.Forms;
 
 namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
 {
@@ -20,6 +21,7 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
         #region ServiceReference
         public Service1Client DbContext { get; set; }
         #endregion
+
         #region Commands
         public ICommand GetPresalesMaintenance { get; set; }
         #endregion
@@ -131,6 +133,7 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
                 cPM.Name = row.CarPreSaleFlowGroupData.Name;
                 cPM.Fname = row.MaintenanceResponsible.FName;
                 cPM.Lname = row.MaintenanceResponsible.LName;
+                cPM.MaintenanceFormId = row.MaintenanceFormId;
                 temp.Add(cPM);
             }
             AllMaintenance = new ObservableCollection<CarPresalesMaintenance>(temp);
@@ -156,15 +159,31 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
         }
         public void Collection_SelectedMaintenance()
         {
-            foreach (var item in AllMaintenance)
+            if (SelectedMaintenance.MaintenanceFormId != 0)
             {
-                if (SelectedMaintenance.Id == item.Id)
+                switch (SelectedMaintenance.MaintenanceFormId)
                 {
-                    Maintenance.MaintenanceBegVM context = new Maintenance.MaintenanceBegVM(SelectedMaintenance.Id);
-                    MaintenanceBegForm form = new MaintenanceBegForm();
-                    form.BindingContext = context;
-                    ShellNav.Current.Navigation.PushAsync(form);
-                    
+                    case 1:
+                        MaintenanceStandardVM contextStandard = new MaintenanceStandardVM(SelectedMaintenance.Id);
+                        MaintenanceStandardForm formStandard = new MaintenanceStandardForm();
+                        formStandard.BindingContext = contextStandard;
+                        ShellNav.Current.Navigation.PushAsync(formStandard);
+                        break;
+                    case 2:
+                        MaintenanceBegVM contextBeg = new MaintenanceBegVM(SelectedMaintenance.Id);
+                        MaintenanceBegForm formBeg = new MaintenanceBegForm();
+                        formBeg.BindingContext = contextBeg;
+                        ShellNav.Current.Navigation.PushAsync(formBeg);
+                        break;
+                    case 3:
+                        MaintenanceLagerVM contextLager = new MaintenanceLagerVM(SelectedMaintenance.Id);
+                        MaintenanceLagerForm formLager = new MaintenanceLagerForm();
+                        formLager.BindingContext = contextLager;
+                        ShellNav.Current.Navigation.PushAsync(formLager);
+                        break;
+                    default:
+                        Application.Current.MainPage.DisplayAlert("Error!", "Object not found!", "OK");
+                        break;
                 }
             }
         }

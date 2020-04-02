@@ -19,15 +19,16 @@
                 <Setter Property="ColumnSpacing" Value="2"/>
             </Style>
             <Style TargetType="CheckBox">
-                <Setter Property="Scale" Value="2"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Scale" Value="1"/>
+                <Setter Property="ScaleX" Value="1.5f"/>
+                <Setter Property="ScaleY" Value="1.5f"/>
                 <Setter Property="BackgroundColor" Value="White"/>
             </Style>
             <Style TargetType="Label">
-                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="BackgroundColor" Value="White"/>
                 <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="Padding" Value="5,2,0,0"/>
             </Style>
             <Style TargetType="Editor">
                 <Setter Property="BackgroundColor" Value="White"/>

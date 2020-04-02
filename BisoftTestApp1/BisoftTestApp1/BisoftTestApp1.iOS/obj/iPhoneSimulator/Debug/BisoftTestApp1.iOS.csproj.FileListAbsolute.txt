@@ -120,3 +120,7 @@ C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\o
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\obj\iPhoneSimulator\Debug\BisoftTestApp1.iOS.csproj.CopyComplete
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\obj\iPhoneSimulator\Debug\BisoftTestApp1.iOS.exe
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\obj\iPhoneSimulator\Debug\BisoftTestApp1.iOS.pdb
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Extensions.dll
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Primitives.dll
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.dll
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1.iOS\bin\iPhoneSimulator\Debug\Plugin.Media.dll

@@ -7,7 +7,7 @@
              xmlns:data="clr-namespace:BisoftTestApp1.ViewModels.Login"
              mc:Ignorable="d"
              x:Class="BisoftTestApp1.Views.LoginPage" Shell.FlyoutBehavior="Disabled" 
-             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Title="Login" Shell.PresentationMode="ModalAnimated">
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Title="Login">
     <ContentPage.BindingContext>
         <data:LoginPageVM/>
     </ContentPage.BindingContext>

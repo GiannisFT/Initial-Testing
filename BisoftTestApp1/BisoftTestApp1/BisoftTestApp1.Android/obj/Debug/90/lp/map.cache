@@ -1,4 +1,7 @@
 FormsViewGroup
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms

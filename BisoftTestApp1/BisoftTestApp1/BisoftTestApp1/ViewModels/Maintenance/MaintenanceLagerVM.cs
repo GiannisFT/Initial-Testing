@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using BisoftTestApp1.ViewModels.BaseClass;
 using ServiceReference1;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace BisoftTestApp1.ViewModels.Maintenance
@@ -21,15 +22,56 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         #endregion
 
 
-        #region Constractors
+        #region Constructors
         public MaintenanceLagerVM()
         {
+            BatteryCheckedColor = Color.Black;
+            HighVBatteryCheckedColor = Color.Black;
+            TyresCheckedColor = Color.Black;
+            BrakeDiscsCheckedColor = Color.Black;
             InsertLagerCommand = new HelpClasses.DelegateCommand(TryInsertMaintenanceLagerData, CanTryInsertMaintenanceLagerData);
+        }
+        public MaintenanceLagerVM(int carpresalesId)
+        {
+            IniCarPreSalesId = carpresalesId;
+            BatteryCheckedColor = Color.Black;
+            HighVBatteryCheckedColor = Color.Black;
+            TyresCheckedColor = Color.Black;
+            BrakeDiscsCheckedColor = Color.Black;
         }
         #endregion
 
 
         #region Properties
+
+        public int IniCarPreSalesId { get; set; }
+
+        #region Preferences
+
+        string ucid = Preferences.Get("UcidValue", null);
+        string uname = Preferences.Get("UsernameValue", null);
+        string pword = Preferences.Get("PasswordValue", null);
+        int offId = Preferences.Get("OfficeIdValue", 0);
+        int empId = Preferences.Get("EmployeeIdValue", 0);
+        int companyId = Preferences.Get("CompanyId", 0);
+        string employeeName = Preferences.Get("EmpNameValue", null);
+        public string EmpFullName { get { return employeeName; } set { } }
+
+        #endregion
+
+        #region Date
+        private DateTime selectedDate = DateTime.Today;
+
+        public DateTime SelectedDate
+        {
+            get { return selectedDate; }
+            set
+            {
+                selectedDate = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("SelectedDate"));
+            }
+        }
+        #endregion
 
         #region Battery
         private string txt_battery;
@@ -88,6 +130,67 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                     return;
                 _batteryCheckedColor = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("BatteryCheckedColor"));
+            }
+        }
+        #endregion
+
+        #region High Voltage Battery
+        private string txt_highVbattery;
+        public string Text_highVbattery
+        {
+            get { return txt_highVbattery; }
+            set
+            {
+                if (txt_highVbattery == value)
+                    return;
+                txt_highVbattery = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("Text_highVbattery"));
+            }
+        }
+
+        private bool box_highVbatteryOK;
+        private bool box_highVbatteryNotOK;
+        public bool IsHighVBatteryOKChecked
+        {
+            get { return box_highVbatteryOK; }
+            set
+            {
+                box_highVbatteryOK = value;
+                if (box_highVbatteryOK)
+                    IsHighVBatteryNotOKChecked = false;
+                OnPropertyChanged(new PropertyChangedEventArgs("IsHighVBatteryOKChecked"));
+            }
+        }
+        public bool IsHighVBatteryNotOKChecked
+        {
+            get { return box_highVbatteryNotOK; }
+            set
+            {
+                box_highVbatteryNotOK = value;
+                if (box_highVbatteryNotOK)
+                    IsHighVBatteryOKChecked = false;
+                OnPropertyChanged(new PropertyChangedEventArgs("IsHighVBatteryNotOKChecked"));
+            }
+        }
+        public bool HighVBatteryCheck
+        {
+            get { return IsHighVBatteryOKChecked; }
+            set
+            {
+                if (IsHighVBatteryOKChecked == false)
+                    IsHighVBatteryNotOKChecked = value;
+            }
+        }
+        private Color _highVbatteryCheckedColor;
+        public Color HighVBatteryCheckedColor
+        {
+            get { return _highVbatteryCheckedColor; }
+            set
+            {
+                if (_highVbatteryCheckedColor == null)
+                    return;
+                _highVbatteryCheckedColor = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("HighVBatteryCheckedColor"));
             }
         }
         #endregion
@@ -220,9 +323,24 @@ namespace BisoftTestApp1.ViewModels.Maintenance
 
         public void TryInsertMaintenanceLagerData(object param)
         {
-            if (CheckBatteryValues() && CheckTyresValues() && CheckBrakeDiscsValues())
+            if (CheckBatteryValues() && CheckHighVBatteryValues() && CheckTyresValues() && CheckBrakeDiscsValues())
             {
+                DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
+                CarPreSalesMaintenaceLagerData lagerdata = new CarPreSalesMaintenaceLagerData();
+                lagerdata.BatteriCheckOK = BatteryCheck;
+                lagerdata.BatteriCheckInfo = Text_battery;
+                
+                lagerdata.TireCheckOK = TyresCheck;
+                lagerdata.TireCheckInfo = Text_tyres;
+                lagerdata.BrakeCheckOK = BrakeDiscsCheck;
+                lagerdata.BrakeCheckInfo = Text_brakediscs;
+                lagerdata.PerformedDate = SelectedDate;
+                lagerdata.PerformedById = empId;
+                lagerdata.CarPreSalesId = IniCarPreSalesId;
+
+                //DbContext.InsertCarPreSalesmaintenanceLager(uname, pword, ucid, lagerdata);
+                Shell.Current.Navigation.PopAsync();
             }
         }
         public bool CanTryInsertMaintenanceLagerData(object param)
@@ -245,7 +363,27 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 BatteryCheckedColor = Color.Red;
             }
             else
-                BatteryCheckedColor = Color.Default;
+                BatteryCheckedColor = Color.Black;
+            return isValid;
+        }
+
+        private bool CheckHighVBatteryValues()
+        {
+            bool isValid = true;
+
+            if (IsHighVBatteryOKChecked == false && IsHighVBatteryNotOKChecked == false)
+            {
+                isValid = false;
+                HighVBatteryCheckedColor = Color.Red;
+            }
+            else if (IsHighVBatteryNotOKChecked == true && string.IsNullOrWhiteSpace(Text_highVbattery))
+            {
+                isValid = false;
+                Application.Current.MainPage.DisplayAlert("", "Beskrivningen få ej vara tom!", "OK");
+                HighVBatteryCheckedColor = Color.Red;
+            }
+            else
+                HighVBatteryCheckedColor = Color.Black;
             return isValid;
         }
 
@@ -265,7 +403,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 TyresCheckedColor = Color.Red;
             }
             else
-                TyresCheckedColor = Color.Default;
+                TyresCheckedColor = Color.Black;
             return isValid;
         }
 
@@ -285,7 +423,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 BrakeDiscsCheckedColor = Color.Red;
             }
             else
-                BrakeDiscsCheckedColor = Color.Default;
+                BrakeDiscsCheckedColor = Color.Black;
             return isValid;
         }
         #endregion

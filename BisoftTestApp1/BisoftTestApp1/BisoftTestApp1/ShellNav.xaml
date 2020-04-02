@@ -12,7 +12,6 @@
     </TabBar>
     <FlyoutItem Route="main" FlyoutDisplayOptions="AsMultipleItems" IsTabStop="False">
         <ShellContent Title="Car Presales Maintenance" Route="presale_maint" ContentTemplate="{DataTemplate views:CarPresalesMaintenancePage}" IsTabStop="False" />
-        <ShellContent Title="Lager" Route="maintenance_lager" ContentTemplate="{DataTemplate views:MaintenanceLagerForm}" IsTabStop="False"/>
     </FlyoutItem>
     <MenuItem Text="Logout" Command="{Binding ExecuteLogout}">
     </MenuItem>

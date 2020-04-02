@@ -17,6 +17,7 @@ namespace BisoftTestApp1.Classes
         public string Name { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
+        public int MaintenanceFormId { get; set; }
         public string FullName { get {return Fname + " " + Lname; } }
     }
 }

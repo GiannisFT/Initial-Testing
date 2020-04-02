@@ -370,7 +370,11 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         #region Constructors
         public MaintenanceBegVM()
         {
-            
+            GearsCheckedColor = Color.Black;
+            CleanCheckedColor = Color.Black;
+            BatteryCheckedColor = Color.Black;
+            BrakesCheckedColor = Color.Black;
+            TyresCheckedColor = Color.Black;
         }
         public MaintenanceBegVM(int carpresalesId)
         {
@@ -386,7 +390,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         #endregion
 
         #region Methods
-        
+
         public void TryInsertMaintenanceBegData(object param)
         {
             if (CheckGearsValues() && CheckCleanValues() && CheckBatteryValues() && CheckBrakesValues() && CheckTyresValues())
@@ -433,7 +437,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 GearsCheckedColor = Color.Red;
             }
             else
-                GearsCheckedColor = Color.Default;
+                GearsCheckedColor = Color.Black;
             return isValid;
         }
         private bool CheckCleanValues()
@@ -452,7 +456,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 CleanCheckedColor = Color.Red;
             }
             else
-                CleanCheckedColor = Color.Default;
+                CleanCheckedColor = Color.Black;
             return isValid;
         }
         private bool CheckBatteryValues()
@@ -471,7 +475,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 BatteryCheckedColor = Color.Red;
             }
             else
-                BatteryCheckedColor = Color.Default;
+                BatteryCheckedColor = Color.Black;
             return isValid;
         }
         private bool CheckBrakesValues()
@@ -490,7 +494,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 BrakesCheckedColor = Color.Red;
             }
             else
-                BrakesCheckedColor = Color.Default;
+                BrakesCheckedColor = Color.Black;
             return isValid;
         }
         private bool CheckTyresValues()
@@ -509,7 +513,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 TyresCheckedColor = Color.Red;
             }
             else
-                TyresCheckedColor = Color.Default;
+                TyresCheckedColor = Color.Black;
             return isValid;
         }
         #endregion

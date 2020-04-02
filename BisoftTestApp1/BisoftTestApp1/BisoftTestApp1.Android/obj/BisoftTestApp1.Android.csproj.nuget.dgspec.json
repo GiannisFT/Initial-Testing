@@ -42,17 +42,25 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Microsoft.Net.Http": {
+              "target": "Package",
+              "version": "[2.2.29, )"
+            },
             "SkiaSharp.Views.Forms": {
               "target": "Package",
               "version": "[1.68.1.1, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.5.0.356, )"
+              "version": "[4.5.0.495, )"
             }
           }
         }
@@ -96,6 +104,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.Net.Http": {
+              "target": "Package",
+              "version": "[2.2.29, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -122,13 +134,17 @@
               "target": "Package",
               "version": "[4.7.0, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.5.0.356, )"
+              "version": "[4.5.0.495, )"
             }
           },
           "imports": [
