@@ -7,6 +7,8 @@ using System.Net.Http;
 using System.Text;
 using System.Windows.Input;
 using BisoftTestApp1.ViewModels.BaseClass;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using ServiceReference1;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -28,10 +30,11 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         #region Constructors
         public MaintenanceStandardVM()
         {
-
+            InfoCheckedColor = Color.Black;
         }
         public MaintenanceStandardVM(int carpresalesId)
         {
+            InfoCheckedColor = Color.Black;
             IniCarPreSalesId = carpresalesId;
             InsertStandardCommand = new HelpClasses.DelegateCommand(TryInsertMaintenanceStandardData, CanTryInsertMaintenanceStandardData);
             SelectPic = new Command(UploadFile);
@@ -81,10 +84,22 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_info"));
             }
         }
+        private Color _infoCheckedColor;
+        public Color InfoCheckedColor
+        {
+            get { return _infoCheckedColor; }
+            set
+            {
+                if (_infoCheckedColor == null)
+                    return;
+                _infoCheckedColor = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("InfoCheckedColor"));
+            }
+        }
         #endregion
 
         #region Upload File
-        
+        public string FilePath { get; set; }
         #endregion
 
         #endregion
@@ -93,17 +108,17 @@ namespace BisoftTestApp1.ViewModels.Maintenance
 
         public void TryInsertMaintenanceStandardData(object param)
         {
-            if (true)
+            if (CheckInfoValue() || FilePath!=null)
             {
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
                 CarPreSalesMaintenaceStandardData standardData = new CarPreSalesMaintenaceStandardData();
                 standardData.PerformedDate = selectedDate;
                 standardData.PerformedById = empId;
-                //standardData.DocPath =
+                standardData.DocPath = FilePath;
                 standardData.CarPreSalesId = IniCarPreSalesId;
 
-                //DbContext.InsertCarPreSalesmaintenanceStandard(uname, pword, ucid, standardData);
+                DbContext.InsertCarPreSalesmaintenanceStandard(uname, pword, ucid, standardData);
                 Shell.Current.Navigation.PopAsync();
             }
         }
@@ -111,39 +126,43 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         {
             return true;
         }
-        public void UploadFile()
+        #region Upload File
+        public async void UploadFile()
         {
-            //string[] temp = file.Path.Split('/');
-            //string[] tempName = temp[temp.Length - 1].Split('.');
-            //string filename = tempName[0];
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await Application.Current.MainPage.DisplayAlert("File Not Supported", ":( Permission not granted to files.", "OK");
+                return;
+            }
 
-            //string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
-            //string filepath = "Files/InternalControl/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
-            //var content = new MultipartFormDataContent();
-            //Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
-            //UriBuilder ub = new UriBuilder(host)
-            //{
-            //    Query = string.Format("filename={0}", filepath)
-            //};
+            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+            {
+                PhotoSize = PhotoSize.Large
+            });
 
-            //Stream data = file.GetStream();
+            string[] temp = file.Path.Split('/');
+            string[] tempName = temp[temp.Length - 1].Split('.');
+            string filename = tempName[0];
+            string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
+            FilePath = "Files/CarPreSales/" + companyId.ToString() + "/" + offId.ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
+            
+            var content = new MultipartFormDataContent();
+            Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
+            UriBuilder ub = new UriBuilder(host)
+            {
+                Query = string.Format("filename={0}", FilePath)
+            };
 
-            //WebClient c = new WebClient();
-            //c.OpenWriteCompleted += (sender, e) =>
-            //{
-            //    PushData(data, e.Result);
-            //    e.Result.Close();
-            //    data.Close();
+            Stream data = file.GetStream();
 
-            //    PhotoCls photo = new PhotoCls
-            //    {
-            //        Name = filename,
-            //        Path = filepath
-            //    };
-
-            //    AddedPhotos.Add(photo);
-            //};
-            //c.OpenWriteAsync(ub.Uri);
+            WebClient c = new WebClient();
+            c.OpenWriteCompleted += (sender, e) =>
+            {
+                PushData(data, e.Result); 
+                e.Result.Close();
+                data.Close();
+            };
+            c.OpenWriteAsync(ub.Uri);
         }
         private void PushData(Stream input, Stream output)
         {
@@ -154,7 +173,20 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 output.Write(buffer, 0, bytesRead);
             }
         }
+        #endregion
+        private bool CheckInfoValue()
+        {
+            bool isValid = true;
 
+            if (Text_info == null)
+            {
+                isValid = false;
+                InfoCheckedColor = Color.Red;
+            }
+            else
+                InfoCheckedColor = Color.Black;
+            return isValid;
+        }
         #endregion
     }
 }

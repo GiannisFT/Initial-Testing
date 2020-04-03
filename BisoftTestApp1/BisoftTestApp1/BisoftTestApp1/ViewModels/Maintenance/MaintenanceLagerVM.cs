@@ -339,7 +339,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 lagerdata.PerformedById = empId;
                 lagerdata.CarPreSalesId = IniCarPreSalesId;
 
-                //DbContext.InsertCarPreSalesmaintenanceLager(uname, pword, ucid, lagerdata);
+                DbContext.InsertCarPreSalesmaintenanceLager(uname, pword, ucid, lagerdata);
                 Shell.Current.Navigation.PopAsync();
             }
         }

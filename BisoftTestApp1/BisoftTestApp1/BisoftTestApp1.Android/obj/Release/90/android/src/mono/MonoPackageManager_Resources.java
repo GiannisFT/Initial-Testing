@@ -2,16 +2,10 @@ package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "BisoftTestApp1.Android.dll" comes first in this list. */
+		"BisoftTestApp1.Android.dll",
 		"BisoftTestApp1.dll",
 		"FormsViewGroup.dll",
-		"Plugin.CurrentActivity.dll",
 		"Plugin.Media.dll",
-		"Plugin.Permissions.dll",
-		"SkiaSharp.dll",
-		"SkiaSharp.Views.Android.dll",
-		"SkiaSharp.Views.Forms.dll",
-		"System.Net.Http.Extensions.dll",
-		"System.Net.Http.Primitives.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
@@ -42,7 +36,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.SlidingPaneLayout.dll",
 		"Xamarin.Android.Support.SwipeRefreshLayout.dll",
 		"Xamarin.Android.Support.Transition.dll",
-		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Android.Support.v7.CardView.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",

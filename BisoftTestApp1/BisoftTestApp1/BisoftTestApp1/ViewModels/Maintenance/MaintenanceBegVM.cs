@@ -412,7 +412,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
                 begdata.PerformedDate = SelectedDate;
                 begdata.CarPreSalesId = IniCarPreSalesId;
 
-                //DbContext.InsertCarPreSalesmaintenanceBeg(uname, pword, ucid, begdata);
+                DbContext.InsertCarPreSalesmaintenanceBeg(uname, pword, ucid, begdata);
                 ShellNav.Current.Navigation.PopAsync();
             }
         }

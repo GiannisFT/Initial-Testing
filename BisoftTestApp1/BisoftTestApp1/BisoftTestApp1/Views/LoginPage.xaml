@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:data="clr-namespace:BisoftTestApp1.ViewModels.Login"
              mc:Ignorable="d"
              x:Class="BisoftTestApp1.Views.LoginPage" Shell.FlyoutBehavior="Disabled" 
@@ -12,11 +11,8 @@
         <data:LoginPageVM/>
     </ContentPage.BindingContext>
     <Grid>
-        <!--<skiaforms:SKCanvasView x:Name="canvasView" PaintSurface="OnCanvasViewPaintSurface"/>-->
         <StackLayout>
-
             <StackLayout>
-
                 <Image Source="bisoft1.png" Aspect="AspectFit" HorizontalOptions="Fill" IsTabStop="False" Margin="10,0" WidthRequest="500" />
                 <Entry Placeholder="Ucid" x:Name="txt_ucid" Text="{Binding Ucid}" HorizontalOptions="EndAndExpand"></Entry>
             </StackLayout>

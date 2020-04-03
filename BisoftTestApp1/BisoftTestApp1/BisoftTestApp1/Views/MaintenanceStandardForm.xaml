@@ -27,16 +27,16 @@
                 </StackLayout>
             </Grid>
             <StackLayout Margin="0,50,0,0">
-                <Label Text="Information om underhållet"/>
+                <Label Text="Information om underhållet" TextColor="{Binding InfoCheckedColor}"/>
                 <Frame BorderColor="DarkGray" HorizontalOptions="Fill">
                     <Editor x:Name="txt_info" Text="{Binding Text_info}" HeightRequest="100"/>
                 </Frame>
             </StackLayout>
             <StackLayout Margin="0,50,0,0">
-                <Label Text="Underhållsdokument"/>
+                <Label Text="Underhållsdokument" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="lbl_filename" Text=""/>
+                <Label x:Name="lbl_filename" Text="{Binding FilePath}"/>
                 <Button x:Name="btn_selectpic" Text="Välj" Command="{Binding SelectPic}" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="End" Margin="0,50,0,0">

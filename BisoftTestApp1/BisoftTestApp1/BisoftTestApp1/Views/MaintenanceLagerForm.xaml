@@ -51,7 +51,7 @@
                 <Label Text="Kontroll av batteristatus, SOC > 80%, > 12,5 volt eller med VAS 6161, ladda vid behov"
                        Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" TextColor="{Binding BatteryCheckedColor}" />
 
-                <Label Text=""
+                <Label 
                        Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" TextColor="{Binding HighVBatteryCheckedColor}">
                     <Label.FormattedText>
                         <FormattedString>

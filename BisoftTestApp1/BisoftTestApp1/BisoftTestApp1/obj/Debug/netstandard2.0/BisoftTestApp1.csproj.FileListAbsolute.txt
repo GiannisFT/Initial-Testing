@@ -32,3 +32,5 @@ C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\D
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\MaintenanceLagerForm.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\MaintenanceStandardForm.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csproj.CoreCompileInputs.cache
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csprojAssemblyReference.cache
