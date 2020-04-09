@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qottcyAvYU4Y1QcKTMXZbnaG08aZSCpx96EO32GCxcvgvkxiR/WT5cKyA9GlAdxkAv/5KGt4AUnVHnC5K0li0A==",
+  "dgSpecHash": "U81wovEoJBBegMOdWrT5RKreDoA7tv2tOMJc1RBaGXuYuSsLueITTofHM3A62i20GMQP0dSwEHzr4atsTEJI9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.iOS\\BisoftTestApp1.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\livexaml\\2.1.73\\livexaml.2.1.73.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.duplex\\4.7.0\\system.servicemodel.duplex.4.7.0.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.http\\4.7.0\\system.servicemodel.http.4.7.0.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.nettcp\\4.7.0\\system.servicemodel.nettcp.4.7.0.nupkg.sha512",

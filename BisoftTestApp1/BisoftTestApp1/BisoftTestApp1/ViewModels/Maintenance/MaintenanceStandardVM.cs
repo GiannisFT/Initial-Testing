@@ -99,7 +99,18 @@ namespace BisoftTestApp1.ViewModels.Maintenance
         #endregion
 
         #region Upload File
-        public string FilePath { get; set; }
+        private string filepath;
+        public string Filepath
+        {
+            get { return filepath; }
+            set
+            {
+                if (filepath == value)
+                    return;
+                filepath = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("Filepath"));
+            }
+        }
         #endregion
 
         #endregion
@@ -108,14 +119,14 @@ namespace BisoftTestApp1.ViewModels.Maintenance
 
         public void TryInsertMaintenanceStandardData(object param)
         {
-            if (CheckInfoValue() || FilePath!=null)
+            if (CheckInfoValue() || Filepath!=null)
             {
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
                 CarPreSalesMaintenaceStandardData standardData = new CarPreSalesMaintenaceStandardData();
                 standardData.PerformedDate = selectedDate;
                 standardData.PerformedById = empId;
-                standardData.DocPath = FilePath;
+                standardData.DocPath = Filepath;
                 standardData.CarPreSalesId = IniCarPreSalesId;
 
                 DbContext.InsertCarPreSalesmaintenanceStandard(uname, pword, ucid, standardData);
@@ -144,13 +155,13 @@ namespace BisoftTestApp1.ViewModels.Maintenance
             string[] tempName = temp[temp.Length - 1].Split('.');
             string filename = tempName[0];
             string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
-            FilePath = "Files/CarPreSales/" + companyId.ToString() + "/" + offId.ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
+            filepath = "Files/CarPreSales/" + companyId.ToString() + "/" + offId.ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
             
             var content = new MultipartFormDataContent();
             Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
             UriBuilder ub = new UriBuilder(host)
             {
-                Query = string.Format("filename={0}", FilePath)
+                Query = string.Format("filename={0}", filepath)
             };
 
             Stream data = file.GetStream();

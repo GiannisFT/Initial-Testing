@@ -42,6 +42,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "LiveXAML": {
+              "target": "Package",
+              "version": "[2.1.73, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

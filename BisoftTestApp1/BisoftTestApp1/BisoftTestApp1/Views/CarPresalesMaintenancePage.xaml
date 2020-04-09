@@ -13,7 +13,7 @@
         <ResourceDictionary>
             <Style TargetType="Label" x:Key="Flow_color">
                 <Setter Property="BackgroundColor" Value="{Binding Color}" />
-                <Setter Property="Padding" Value="1 1 1 1" />
+                <Setter Property="Padding" Value="1" />
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
             
@@ -21,14 +21,18 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Frame BorderColor="Silver" HorizontalOptions="Fill">
-            <Label x:Name="lbl_picker" Text="Välj Driftställe">
+
+            <Frame x:Name="FrameExtContainer" Padding="0" HasShadow="False" HorizontalOptions="FillAndExpand" CornerRadius="1" OutlineColor="Black" BackgroundColor="Black" >
+                <Frame x:Name="FrameIntContainer" Padding="1" HasShadow="False" HorizontalOptions="FillAndExpand" CornerRadius="1" OutlineColor="Black" BackgroundColor="White" >
+                    <Label x:Name="lbl_picker" Text="Välj Driftställe" HorizontalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
                     </TapGestureRecognizer>
-                    </Label.GestureRecognizers>
-                </Label>
+                </Label.GestureRecognizers>
+            </Label>
             </Frame>
+            </Frame>
+            <Label Text="What"/>
             <Picker x:Name="off_picker" Title="Välj Driftställe" ItemsSource="{Binding AllOffices}"
                     ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedOffice}"
                     IsVisible="False" SelectedIndexChanged="off_picker_SelectedIndexChanged">

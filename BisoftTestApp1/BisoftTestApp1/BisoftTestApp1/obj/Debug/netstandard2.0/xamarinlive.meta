@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\App.xaml</FilePath>
+      <Hash>73-BB-9D-67-51-05-F3-43-57-83-0B-4D-00-90-04-05</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\ShellNav.xaml</FilePath>
+      <Hash>C6-31-44-BF-57-FF-A6-03-84-C8-EB-F6-3B-0C-F5-22</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\Views\CarPresalesMaintenancePage.xaml</FilePath>
+      <Hash>27-7E-4F-88-29-5C-6C-4B-FF-03-B3-71-2C-FA-75-2D</Hash>
+      <Properties>
+        <string>Shell.TabBarIsVisible</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\Views\LoginPage.xaml</FilePath>
+      <Hash>54-A5-1B-4C-90-9B-A5-60-B6-2D-96-7F-12-FF-78-1D</Hash>
+      <Properties>
+        <string>Shell.FlyoutBehavior</string>
+        <string>Shell.NavBarIsVisible</string>
+        <string>Shell.TabBarIsVisible</string>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\Views\MaintenanceBegForm.xaml</FilePath>
+      <Hash>5F-89-91-62-65-54-9E-A3-50-07-48-54-7F-00-9A-2C</Hash>
+      <Properties>
+        <string>Title</string>
+        <string>Shell.TabBarIsVisible</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\Views\MaintenanceLagerForm.xaml</FilePath>
+      <Hash>53-80-7D-64-CB-5A-3F-1A-1F-20-55-3D-09-2B-57-E5</Hash>
+      <Properties>
+        <string>Title</string>
+        <string>Shell.TabBarIsVisible</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\Views\MaintenanceStandardForm.xaml</FilePath>
+      <Hash>88-45-21-3C-82-D7-20-03-DC-79-5D-DC-A9-7C-B0-D6</Hash>
+      <Properties>
+        <string>Title</string>
+        <string>Shell.TabBarIsVisible</string>
+      </Properties>
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NSoG0kDZYIoYnLSLaPWK+bZyb8uCLF4YKdw9sp5qWNLIqJHBcpb9T9YURrAmQmcokvxfJ9eGvp0AVlg7sy4+4A==",
+  "dgSpecHash": "LliZtn5A7uSNEQwE1oG/jIM2QdyYGo7NNy5m70AQzUFC2fWFq/1S8iZKMF9rXduI+NIknx9/VQVEbzWd/zwveA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\livexaml\\2.1.73\\livexaml.2.1.73.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",

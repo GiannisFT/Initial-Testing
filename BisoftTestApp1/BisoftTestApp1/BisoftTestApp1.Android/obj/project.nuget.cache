@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fPz5zUrjaaOEEcZ+baHM3AMMG9smCBv2ZliEE3HwwTFdCWcFoPlfdUHc+BuUWzlQl3xjcFhtyCZXKgpRzyVuaQ==",
+  "dgSpecHash": "gnx+R7nka8hsOp2pkU5Ba9y0o033//xGYTtB567cPwcj6xrpKYQzdvQz02BNd/+q/0puzPIQGBGHDGzebpNEMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giannis F Tsouri\\Git\\BisoftTestApp1\\BisoftTestApp1\\BisoftTestApp1.Android\\BisoftTestApp1.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\livexaml\\2.1.73\\livexaml.2.1.73.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.duplex\\4.7.0\\system.servicemodel.duplex.4.7.0.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.http\\4.7.0\\system.servicemodel.http.4.7.0.nupkg.sha512",
     "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.nettcp\\4.7.0\\system.servicemodel.nettcp.4.7.0.nupkg.sha512",

@@ -9,83 +9,257 @@
     <ContentPage.BindingContext>
         <data:MaintenanceBegVM/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="2"/>
+                <Setter Property="ColumnSpacing" Value="2"/>
+            </Style>
+            <Style TargetType="CheckBox">
+                <Setter Property="Scale" Value="1.7"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="5,0,0,0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Margin="10" >
-            <Grid BackgroundColor="DarkGray">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="439"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="Purple">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="69" />
-                    <RowDefinition Height="30" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="60" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="345"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="3.5*"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="0"/>
-                </Grid.ColumnDefinitions>
-                
-                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White">
-                    <Label Text="Utförd(datum)"/>
-                    <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
-                             BackgroundColor="White" Margin="0,-10,0,0"/>
-                </StackLayout>
-                <StackLayout Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" BackgroundColor="White">
-                    <Label Text="Utförd av"/>
-                    <Label x:Name="lbl_empname" Text="{Binding EmpFullName}"/>
-                </StackLayout>
-                
-                <Label Text="Nr" Grid.Row="1" Grid.Column="0"/>
-                <Label Text="1." Grid.Row="2" Grid.Column="0"/>
-                <Label Text="2." Grid.Row="3" Grid.Column="0"/>
-                <Label Text="3." Grid.Row="4" Grid.Column="0"/>
-                <Label Text="4." Grid.Row="5" Grid.Column="0"/>
-                <Label Text="5." Grid.Row="6" Grid.Column="0"/>
-                 <Label Text="Underhållspunkt" TextColor="DarkBlue"
-                       Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Label Text="Manuell v-låda första växel, automat i park-läge, ej handbroms åtdragen"
-                       Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" TextColor="{Binding GearsCheckedColor}"/>
-                <Label Text="Bil tvättad/avdammad" TextColor="{Binding CleanCheckedColor}"
-                       Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Label Text="Kontroll av batteristatus, ladda vid under 12,5 volt" TextColor="{Binding BatteryCheckedColor}"
-                       Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Label Text="Provkörd/provbromsad" TextColor="{Binding BrakesCheckedColor}"
-                       Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Label Text="Däcktryck kontrollerad enligt rekommenderat" TextColor="{Binding TyresCheckedColor}"
-                       Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Label Text="OK" TextColor="Green" 
-                       Grid.Row="1" Grid.Column="4"/>
-                <CheckBox x:Name="box_gearsOK" Color="Gray" Grid.Row="2" Grid.Column="4" IsChecked="{Binding IsGearsOKChecked}"/>
-                <CheckBox x:Name="box_cleanOK" Color="Gray" Grid.Row="3" Grid.Column="4" IsChecked="{Binding IsCleanOKChecked}"/>
-                <CheckBox x:Name="box_batteryOK" Color="Gray" Grid.Row="4" Grid.Column="4" IsChecked="{Binding IsBatteryOKChecked}"/>
-                <CheckBox x:Name="box_brakesOK" Color="Gray" Grid.Row="5" Grid.Column="4" IsChecked="{Binding IsBrakesOKChecked}"/>
-                <CheckBox x:Name="box_tyresOK" Color="Gray" Grid.Row="6" Grid.Column="4" IsChecked="{Binding IsTyresOKChecked}"/>
-                <Label Text="EJ OK" TextColor="Red" 
-                       Grid.Row="1" Grid.Column="5"/>
-                <CheckBox x:Name="box_gearsNotOK" Color="Gray" Grid.Row="2" Grid.Column="5" IsChecked="{Binding IsGearsNotOKChecked}"/>
-                <CheckBox x:Name="box_cleanNotOK" Color="Gray" Grid.Row="3" Grid.Column="5" IsChecked="{Binding IsCleanNotOKChecked}"/>
-                <CheckBox x:Name="box_batteryNotOK" Color="Gray" Grid.Row="4" Grid.Column="5" IsChecked="{Binding IsBatteryNotOKChecked}"/>
-                <CheckBox x:Name="box_brakesNotOK" Color="Gray" Grid.Row="5" Grid.Column="5" IsChecked="{Binding IsBrakesNotOKChecked}"/>
-                <CheckBox x:Name="box_tyresNotOK" Color="Gray" Grid.Row="6" Grid.Column="5" IsChecked="{Binding IsTyresNotOKChecked}"/>
-                    <Label Text="Beskrivning (obligatorisk om ej ok)"
-                       Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2"/>
-                <Editor x:Name="txt_gears" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Text="{Binding Text_gears}" />
-                <Editor x:Name="txt_clean" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" Text="{Binding Text_clean}" />
-                <Editor x:Name="txt_battery" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2" Text="{Binding Text_battery}" />
-                <Editor x:Name="txt_brakes" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="2" Text="{Binding Text_brakes}" />
-                <Editor x:Name="txt_tyres" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="2" Text="{Binding Text_tyres}" />
+                <Grid Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" RowSpacing="0" Padding="0,0,-0.5,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="Utförd(datum)"/>
+                                <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
+                                            HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Column="1" RowSpacing="0" Padding="0.5,0,0,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="Utförd av"/>
+                                <Label Text="{Binding EmpFullName}" Padding="5,10,0,0"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="3.6*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Nr"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="1."/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="2."/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="3."/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="4."/>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="5."/>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Underhållspunkt" TextColor="DarkBlue"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Manuell v-låda första växel, automat i park-läge, ej handbroms åtdragen" 
+                                       TextColor="{Binding GearsCheckedColor}"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Bil tvättad/avdammad" 
+                                       TextColor="{Binding CleanCheckedColor}"/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Kontroll av batteristatus, ladda vid under 12,5 volt" 
+                                       TextColor="{Binding BatteryCheckedColor}"/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Provkörd/provbromsad" 
+                                       TextColor="{Binding BrakesCheckedColor}"/>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Däcktryck kontrollerad enligt rekommenderat" 
+                                       TextColor="{Binding TyresCheckedColor}"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="2" Padding="0,0,1,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="OK" TextColor="Green" HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_gearsOK" Color="Green" IsChecked="{Binding IsGearsOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_cleanOK" Color="Green" IsChecked="{Binding IsCleanOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_batteryOK" Color="Green" IsChecked="{Binding IsBatteryOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_brakesOK" Color="Green" IsChecked="{Binding IsBrakesOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_tyresOK" Color="Green" IsChecked="{Binding IsTyresOKChecked}"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="EJ OK" TextColor="Red" HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_gearsNotOK" Color="Red" IsChecked="{Binding IsGearsNotOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_cleanNotOK" Color="Red" IsChecked="{Binding IsCleanNotOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_batteryNotOK" Color="Red" IsChecked="{Binding IsBatteryNotOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_brakesNotOK" Color="Red" IsChecked="{Binding IsBrakesNotOKChecked}"/>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <BoxView BackgroundColor="White"/>
+                                <CheckBox x:Name="box_tyresNotOK" Color="Red" IsChecked="{Binding IsTyresNotOKChecked}"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <BoxView BackgroundColor="White"/>
+                                <Label Text="Beskrivning (obligatorisk om ej ok)"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <BoxView BackgroundColor="White"/>
+                                <Editor x:Name="txt_gears" Text="{Binding Text_gears}"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <BoxView BackgroundColor="White"/>
+                                <Editor x:Name="txt_clean" Text="{Binding Text_clean}"/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <BoxView BackgroundColor="White"/>
+                                <Editor x:Name="txt_battery" Text="{Binding Text_battery}"/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <BoxView BackgroundColor="White"/>
+                                <Editor x:Name="txt_brakes" Text="{Binding Text_brakes}"/>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <BoxView BackgroundColor="White"/>
+                                <Editor x:Name="txt_tyres" Text="{Binding Text_tyres}"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
             </Grid>
-            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="End" Margin="0,20,0,0">
-                <Button x:Name="btn_cancel" Text="Avbryt" Command="{Binding CancelCommand}"/>
-                <Button x:Name="btn_save" Text="Spara" Command="{Binding InsertBegCommand}"/>
-            </StackLayout>
-        </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,20,0,0">
+                        <Button x:Name="btn_cancel" Text="AVBRYT" Command="{Binding CancelCommand}"/>
+                        <Button x:Name="btn_save" Text="SPARA" Command="{Binding InsertBegCommand}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

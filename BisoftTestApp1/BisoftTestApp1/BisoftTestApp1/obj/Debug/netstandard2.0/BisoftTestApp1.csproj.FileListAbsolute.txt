@@ -19,7 +19,6 @@ C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\D
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\BisoftTestApp1.dll
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\ref\BisoftTestApp1.dll
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\bin\Debug\netstandard2.0\BisoftTestApp1.pdb
-C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\ShellNav.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.AssemblyInfoInputs.cache
@@ -31,6 +30,7 @@ C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\D
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\MaintenanceBegForm.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\MaintenanceLagerForm.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\Views\MaintenanceStandardForm.xaml.g.cs
-C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csproj.CoreCompileInputs.cache
 C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csprojAssemblyReference.cache
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\BisoftTestApp1.csproj.CoreCompileInputs.cache
+C:\Users\Giannis F Tsouri\Git\BisoftTestApp1\BisoftTestApp1\BisoftTestApp1\obj\Debug\netstandard2.0\XamlC.stamp

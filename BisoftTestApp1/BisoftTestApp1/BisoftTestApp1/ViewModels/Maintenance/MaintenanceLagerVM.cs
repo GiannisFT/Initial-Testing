@@ -29,7 +29,6 @@ namespace BisoftTestApp1.ViewModels.Maintenance
             HighVBatteryCheckedColor = Color.Black;
             TyresCheckedColor = Color.Black;
             BrakeDiscsCheckedColor = Color.Black;
-            InsertLagerCommand = new HelpClasses.DelegateCommand(TryInsertMaintenanceLagerData, CanTryInsertMaintenanceLagerData);
         }
         public MaintenanceLagerVM(int carpresalesId)
         {
@@ -38,6 +37,7 @@ namespace BisoftTestApp1.ViewModels.Maintenance
             HighVBatteryCheckedColor = Color.Black;
             TyresCheckedColor = Color.Black;
             BrakeDiscsCheckedColor = Color.Black;
+            InsertLagerCommand = new HelpClasses.DelegateCommand(TryInsertMaintenanceLagerData, CanTryInsertMaintenanceLagerData);
         }
         #endregion
 

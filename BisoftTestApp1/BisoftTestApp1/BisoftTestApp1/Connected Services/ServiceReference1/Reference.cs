@@ -652,7 +652,7 @@ namespace ServiceReference1
         
         private ServiceReference1.ICOLogRowFileData[] ImageFilesField;
         
-        private int InternalControlOfficeLogRowIdField;
+        private System.Nullable<int> InternalControlOfficeRowIdField;
         
         private bool IsEAField;
         
@@ -754,15 +754,15 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int InternalControlOfficeLogRowId
+        public System.Nullable<int> InternalControlOfficeRowId
         {
             get
             {
-                return this.InternalControlOfficeLogRowIdField;
+                return this.InternalControlOfficeRowIdField;
             }
             set
             {
-                this.InternalControlOfficeLogRowIdField = value;
+                this.InternalControlOfficeRowIdField = value;
             }
         }
         
@@ -881,7 +881,7 @@ namespace ServiceReference1
         
         private string FilePathField;
         
-        private int IdField;
+        private System.Nullable<int> IdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string FileName
@@ -910,7 +910,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
+        public System.Nullable<int> Id
         {
             get
             {
@@ -1714,106 +1714,517 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QualityReportData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class QualityReportData : object
+    {
+        
+        private System.Nullable<int> AnalysisCausedByIdField;
+        
+        private string AnalysisTextField;
+        
+        private string AoNrField;
+        
+        private System.DateTime CreatedField;
+        
+        private int CreatedByField;
+        
+        private int CustomerReportIdField;
+        
+        private bool DeletedField;
+        
+        private string DescriptionField;
+        
+        private System.Nullable<int> FinalDecisionCostField;
+        
+        private string FinalDecisionTextField;
+        
+        private int IdField;
+        
+        private int MyPropertyField;
+        
+        private int OfficeDepartmentTaskIdField;
+        
+        private int OfficeIdField;
+        
+        private System.Nullable<int> QRAnalysisHeaderIdField;
+        
+        private ServiceReference1.QRAttachedFileData[] QRAttachedFileDataField;
+        
+        private System.Nullable<int> QRFinalDecisionHeaderIdField;
+        
+        private int QRReportResponsibleIdField;
+        
+        private string RegNrField;
+        
+        private int ReportNrField;
+        
+        private string StatusField;
+        
+        private int StatusIdField;
+        
+        private System.Nullable<int> TotalCostField;
+        
+        private int YearField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> AnalysisCausedById
+        {
+            get
+            {
+                return this.AnalysisCausedByIdField;
+            }
+            set
+            {
+                this.AnalysisCausedByIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AnalysisText
+        {
+            get
+            {
+                return this.AnalysisTextField;
+            }
+            set
+            {
+                this.AnalysisTextField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AoNr
+        {
+            get
+            {
+                return this.AoNrField;
+            }
+            set
+            {
+                this.AoNrField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Created
+        {
+            get
+            {
+                return this.CreatedField;
+            }
+            set
+            {
+                this.CreatedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CreatedBy
+        {
+            get
+            {
+                return this.CreatedByField;
+            }
+            set
+            {
+                this.CreatedByField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CustomerReportId
+        {
+            get
+            {
+                return this.CustomerReportIdField;
+            }
+            set
+            {
+                this.CustomerReportIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Deleted
+        {
+            get
+            {
+                return this.DeletedField;
+            }
+            set
+            {
+                this.DeletedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.DescriptionField;
+            }
+            set
+            {
+                this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> FinalDecisionCost
+        {
+            get
+            {
+                return this.FinalDecisionCostField;
+            }
+            set
+            {
+                this.FinalDecisionCostField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FinalDecisionText
+        {
+            get
+            {
+                return this.FinalDecisionTextField;
+            }
+            set
+            {
+                this.FinalDecisionTextField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MyProperty
+        {
+            get
+            {
+                return this.MyPropertyField;
+            }
+            set
+            {
+                this.MyPropertyField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OfficeDepartmentTaskId
+        {
+            get
+            {
+                return this.OfficeDepartmentTaskIdField;
+            }
+            set
+            {
+                this.OfficeDepartmentTaskIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OfficeId
+        {
+            get
+            {
+                return this.OfficeIdField;
+            }
+            set
+            {
+                this.OfficeIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> QRAnalysisHeaderId
+        {
+            get
+            {
+                return this.QRAnalysisHeaderIdField;
+            }
+            set
+            {
+                this.QRAnalysisHeaderIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.QRAttachedFileData[] QRAttachedFileData
+        {
+            get
+            {
+                return this.QRAttachedFileDataField;
+            }
+            set
+            {
+                this.QRAttachedFileDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> QRFinalDecisionHeaderId
+        {
+            get
+            {
+                return this.QRFinalDecisionHeaderIdField;
+            }
+            set
+            {
+                this.QRFinalDecisionHeaderIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QRReportResponsibleId
+        {
+            get
+            {
+                return this.QRReportResponsibleIdField;
+            }
+            set
+            {
+                this.QRReportResponsibleIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RegNr
+        {
+            get
+            {
+                return this.RegNrField;
+            }
+            set
+            {
+                this.RegNrField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ReportNr
+        {
+            get
+            {
+                return this.ReportNrField;
+            }
+            set
+            {
+                this.ReportNrField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status
+        {
+            get
+            {
+                return this.StatusField;
+            }
+            set
+            {
+                this.StatusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StatusId
+        {
+            get
+            {
+                return this.StatusIdField;
+            }
+            set
+            {
+                this.StatusIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TotalCost
+        {
+            get
+            {
+                return this.TotalCostField;
+            }
+            set
+            {
+                this.TotalCostField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Year
+        {
+            get
+            {
+                return this.YearField;
+            }
+            set
+            {
+                this.YearField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QRAttachedFileData", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class QRAttachedFileData : object
+    {
+        
+        private string FileNameField;
+        
+        private string FilePathField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName
+        {
+            get
+            {
+                return this.FileNameField;
+            }
+            set
+            {
+                this.FileNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FilePath
+        {
+            get
+            {
+                return this.FilePathField;
+            }
+            set
+            {
+                this.FilePathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WCFReturnResultCls", Namespace="http://schemas.datacontract.org/2004/07/BisoftMobileWCFService.Classes")]
+    public partial class WCFReturnResultCls : object
+    {
+        
+        private int IdField;
+        
+        private string MessageField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message
+        {
+            get
+            {
+                return this.MessageField;
+            }
+            set
+            {
+                this.MessageField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoginEmployee", ReplyAction="http://tempuri.org/IService1/LoginEmployeeResponse")]
-        ServiceReference1.EmployeeData LoginEmployee(string username, string password, string ucid);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoginEmployee", ReplyAction="http://tempuri.org/IService1/LoginEmployeeResponse")]
         System.Threading.Tasks.Task<ServiceReference1.EmployeeData> LoginEmployeeAsync(string username, string password, string ucid);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControls", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlsResponse")]
-        ServiceReference1.InternalControlOfficeData[] GetOfficeInternalControls(string username, string password, string ucid, int officeId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControls", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlsResponse")]
         System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData[]> GetOfficeInternalControlsAsync(string username, string password, string ucid, int officeId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformControlResponse")]
-        ServiceReference1.InternalControlOfficeData GetOfficeInternalControlPerformControl(string username, string password, string ucid, int officeId, int officecontrolId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlAsync(string username, string password, string ucid, int officeId, int officecontrolId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformControlResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlPerformControlAsync(string username, string password, string ucid, int officeId, int officecontrolId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControlResponse")]
-        ServiceReference1.InternalControlOfficeLogData GetOfficeInternalControlPerformedControl(string username, string password, string ucid, int controlLogId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControl", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlPerformedControlResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlPerformedControlAsync(string username, string password, string ucid, int controlLogId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlLogs", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlLogsResponse")]
-        ServiceReference1.InternalControlOfficeData GetOfficeInternalControlLogs(string username, string password, string ucid, int officecontrolId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlLog", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlLogResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlLogAsync(string username, string password, string ucid, int controlLogId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeInternalControlLogs", ReplyAction="http://tempuri.org/IService1/GetOfficeInternalControlLogsResponse")]
         System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlLogsAsync(string username, string password, string ucid, int officecontrolId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControlResponse")]
-        string InsertOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/InsertOfficeInternalControlPerformControlResponse")]
         System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControlResponse")]
-        string UpdateOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/UpdateOfficeInternalControlPerformControlResponse")]
-        System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateOfficeInternalControlLog", ReplyAction="http://tempuri.org/IService1/UpdateOfficeInternalControlLogResponse")]
+        System.Threading.Tasks.Task<string> UpdateOfficeInternalControlLogAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControlResponse")]
-        string DeleteOfficeInternalControlPerformControl(int logId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControl", ReplyAction="http://tempuri.org/IService1/DeleteOfficeInternalControlPerformControlResponse")]
-        System.Threading.Tasks.Task<string> DeleteOfficeInternalControlPerformControlAsync(int logId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetICErrorCodes", ReplyAction="http://tempuri.org/IService1/GetICErrorCodesResponse")]
-        ServiceReference1.ICErrorCodeMainGroupData[] GetICErrorCodes(string username, string password, string ucid, int companyId);
+        System.Threading.Tasks.Task<string> DeleteOfficeInternalControlPerformControlAsync(string username, string password, string ucid, int logId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetICErrorCodes", ReplyAction="http://tempuri.org/IService1/GetICErrorCodesResponse")]
         System.Threading.Tasks.Task<ServiceReference1.ICErrorCodeMainGroupData[]> GetICErrorCodesAsync(string username, string password, string ucid, int companyId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficesByCompanyId", ReplyAction="http://tempuri.org/IService1/GetOfficesByCompanyIdResponse")]
-        ServiceReference1.OfficeData[] GetOfficesByCompanyId(string username, string password, string ucid, int companyId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficesByCompanyId", ReplyAction="http://tempuri.org/IService1/GetOfficesByCompanyIdResponse")]
         System.Threading.Tasks.Task<ServiceReference1.OfficeData[]> GetOfficesByCompanyIdAsync(string username, string password, string ucid, int companyId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficesAndEmployeesByCompanyId", ReplyAction="http://tempuri.org/IService1/GetOfficesAndEmployeesByCompanyIdResponse")]
-        ServiceReference1.OfficeData[] GetOfficesAndEmployeesByCompanyId(string username, string password, string ucid, int companyId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficesAndEmployeesByCompanyId", ReplyAction="http://tempuri.org/IService1/GetOfficesAndEmployeesByCompanyIdResponse")]
         System.Threading.Tasks.Task<ServiceReference1.OfficeData[]> GetOfficesAndEmployeesByCompanyIdAsync(string username, string password, string ucid, int companyId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCarPreSalesmaintenanceByOffice", ReplyAction="http://tempuri.org/IService1/GetCarPreSalesmaintenanceByOfficeResponse")]
-        ServiceReference1.CarPreSalesMaintenanceData[] GetCarPreSalesmaintenanceByOffice(string username, string password, string ucid, int officeId, System.Nullable<int> employeeId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCarPreSalesmaintenanceByOffice", ReplyAction="http://tempuri.org/IService1/GetCarPreSalesmaintenanceByOfficeResponse")]
         System.Threading.Tasks.Task<ServiceReference1.CarPreSalesMaintenanceData[]> GetCarPreSalesmaintenanceByOfficeAsync(string username, string password, string ucid, int officeId, System.Nullable<int> employeeId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBeg", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBegResponse")]
-        string InsertCarPreSalesmaintenanceBeg(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBeg", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceBegResponse")]
         System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLager", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLagerResponse")]
-        string InsertCarPreSalesmaintenanceLager(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLager", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceLagerResponse")]
         System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceLagerAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandard", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandardResponse")]
-        string InsertCarPreSalesmaintenanceStandard(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandard", ReplyAction="http://tempuri.org/IService1/InsertCarPreSalesmaintenanceStandardResponse")]
         System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceStandardAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyVehicleBrands", ReplyAction="http://tempuri.org/IService1/GetCompanyVehicleBrandsResponse")]
-        ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyVehicleBrands", ReplyAction="http://tempuri.org/IService1/GetCompanyVehicleBrandsResponse")]
         System.Threading.Tasks.Task<ServiceReference1.VehicleBrandData[]> GetCompanyVehicleBrandsAsync(string username, string password, string ucid, int companyId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertQualityReport", ReplyAction="http://tempuri.org/IService1/InsertQualityReportResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertQualityReportAsync(string username, string password, string ucid, ServiceReference1.QualityReportData data);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -1866,19 +2277,9 @@ namespace ServiceReference1
         {
         }
         
-        public ServiceReference1.EmployeeData LoginEmployee(string username, string password, string ucid)
-        {
-            return base.Channel.LoginEmployee(username, password, ucid);
-        }
-        
         public System.Threading.Tasks.Task<ServiceReference1.EmployeeData> LoginEmployeeAsync(string username, string password, string ucid)
         {
             return base.Channel.LoginEmployeeAsync(username, password, ucid);
-        }
-        
-        public ServiceReference1.InternalControlOfficeData[] GetOfficeInternalControls(string username, string password, string ucid, int officeId)
-        {
-            return base.Channel.GetOfficeInternalControls(username, password, ucid, officeId);
         }
         
         public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData[]> GetOfficeInternalControlsAsync(string username, string password, string ucid, int officeId)
@@ -1886,29 +2287,14 @@ namespace ServiceReference1
             return base.Channel.GetOfficeInternalControlsAsync(username, password, ucid, officeId);
         }
         
-        public ServiceReference1.InternalControlOfficeData GetOfficeInternalControlPerformControl(string username, string password, string ucid, int officeId, int officecontrolId)
+        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlAsync(string username, string password, string ucid, int officeId, int officecontrolId)
         {
-            return base.Channel.GetOfficeInternalControlPerformControl(username, password, ucid, officeId, officecontrolId);
+            return base.Channel.GetOfficeInternalControlAsync(username, password, ucid, officeId, officecontrolId);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlPerformControlAsync(string username, string password, string ucid, int officeId, int officecontrolId)
+        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlLogAsync(string username, string password, string ucid, int controlLogId)
         {
-            return base.Channel.GetOfficeInternalControlPerformControlAsync(username, password, ucid, officeId, officecontrolId);
-        }
-        
-        public ServiceReference1.InternalControlOfficeLogData GetOfficeInternalControlPerformedControl(string username, string password, string ucid, int controlLogId)
-        {
-            return base.Channel.GetOfficeInternalControlPerformedControl(username, password, ucid, controlLogId);
-        }
-        
-        public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeLogData> GetOfficeInternalControlPerformedControlAsync(string username, string password, string ucid, int controlLogId)
-        {
-            return base.Channel.GetOfficeInternalControlPerformedControlAsync(username, password, ucid, controlLogId);
-        }
-        
-        public ServiceReference1.InternalControlOfficeData GetOfficeInternalControlLogs(string username, string password, string ucid, int officecontrolId)
-        {
-            return base.Channel.GetOfficeInternalControlLogs(username, password, ucid, officecontrolId);
+            return base.Channel.GetOfficeInternalControlLogAsync(username, password, ucid, controlLogId);
         }
         
         public System.Threading.Tasks.Task<ServiceReference1.InternalControlOfficeData> GetOfficeInternalControlLogsAsync(string username, string password, string ucid, int officecontrolId)
@@ -1916,39 +2302,19 @@ namespace ServiceReference1
             return base.Channel.GetOfficeInternalControlLogsAsync(username, password, ucid, officecontrolId);
         }
         
-        public string InsertOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
-        {
-            return base.Channel.InsertOfficeInternalControlPerformControl(username, password, ucid, officeLog);
-        }
-        
         public System.Threading.Tasks.Task<string> InsertOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
         {
             return base.Channel.InsertOfficeInternalControlPerformControlAsync(username, password, ucid, officeLog);
         }
         
-        public string UpdateOfficeInternalControlPerformControl(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        public System.Threading.Tasks.Task<string> UpdateOfficeInternalControlLogAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
         {
-            return base.Channel.UpdateOfficeInternalControlPerformControl(username, password, ucid, officeLog);
+            return base.Channel.UpdateOfficeInternalControlLogAsync(username, password, ucid, officeLog);
         }
         
-        public System.Threading.Tasks.Task<string> UpdateOfficeInternalControlPerformControlAsync(string username, string password, string ucid, ServiceReference1.InternalControlOfficeLogData officeLog)
+        public System.Threading.Tasks.Task<string> DeleteOfficeInternalControlPerformControlAsync(string username, string password, string ucid, int logId)
         {
-            return base.Channel.UpdateOfficeInternalControlPerformControlAsync(username, password, ucid, officeLog);
-        }
-        
-        public string DeleteOfficeInternalControlPerformControl(int logId)
-        {
-            return base.Channel.DeleteOfficeInternalControlPerformControl(logId);
-        }
-        
-        public System.Threading.Tasks.Task<string> DeleteOfficeInternalControlPerformControlAsync(int logId)
-        {
-            return base.Channel.DeleteOfficeInternalControlPerformControlAsync(logId);
-        }
-        
-        public ServiceReference1.ICErrorCodeMainGroupData[] GetICErrorCodes(string username, string password, string ucid, int companyId)
-        {
-            return base.Channel.GetICErrorCodes(username, password, ucid, companyId);
+            return base.Channel.DeleteOfficeInternalControlPerformControlAsync(username, password, ucid, logId);
         }
         
         public System.Threading.Tasks.Task<ServiceReference1.ICErrorCodeMainGroupData[]> GetICErrorCodesAsync(string username, string password, string ucid, int companyId)
@@ -1956,19 +2322,9 @@ namespace ServiceReference1
             return base.Channel.GetICErrorCodesAsync(username, password, ucid, companyId);
         }
         
-        public ServiceReference1.OfficeData[] GetOfficesByCompanyId(string username, string password, string ucid, int companyId)
-        {
-            return base.Channel.GetOfficesByCompanyId(username, password, ucid, companyId);
-        }
-        
         public System.Threading.Tasks.Task<ServiceReference1.OfficeData[]> GetOfficesByCompanyIdAsync(string username, string password, string ucid, int companyId)
         {
             return base.Channel.GetOfficesByCompanyIdAsync(username, password, ucid, companyId);
-        }
-        
-        public ServiceReference1.OfficeData[] GetOfficesAndEmployeesByCompanyId(string username, string password, string ucid, int companyId)
-        {
-            return base.Channel.GetOfficesAndEmployeesByCompanyId(username, password, ucid, companyId);
         }
         
         public System.Threading.Tasks.Task<ServiceReference1.OfficeData[]> GetOfficesAndEmployeesByCompanyIdAsync(string username, string password, string ucid, int companyId)
@@ -1976,19 +2332,9 @@ namespace ServiceReference1
             return base.Channel.GetOfficesAndEmployeesByCompanyIdAsync(username, password, ucid, companyId);
         }
         
-        public ServiceReference1.CarPreSalesMaintenanceData[] GetCarPreSalesmaintenanceByOffice(string username, string password, string ucid, int officeId, System.Nullable<int> employeeId)
-        {
-            return base.Channel.GetCarPreSalesmaintenanceByOffice(username, password, ucid, officeId, employeeId);
-        }
-        
         public System.Threading.Tasks.Task<ServiceReference1.CarPreSalesMaintenanceData[]> GetCarPreSalesmaintenanceByOfficeAsync(string username, string password, string ucid, int officeId, System.Nullable<int> employeeId)
         {
             return base.Channel.GetCarPreSalesmaintenanceByOfficeAsync(username, password, ucid, officeId, employeeId);
-        }
-        
-        public string InsertCarPreSalesmaintenanceBeg(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata)
-        {
-            return base.Channel.InsertCarPreSalesmaintenanceBeg(username, password, ucid, begdata);
         }
         
         public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceBegAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceBegData begdata)
@@ -1996,19 +2342,9 @@ namespace ServiceReference1
             return base.Channel.InsertCarPreSalesmaintenanceBegAsync(username, password, ucid, begdata);
         }
         
-        public string InsertCarPreSalesmaintenanceLager(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata)
-        {
-            return base.Channel.InsertCarPreSalesmaintenanceLager(username, password, ucid, lagerdata);
-        }
-        
         public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceLagerAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceLagerData lagerdata)
         {
             return base.Channel.InsertCarPreSalesmaintenanceLagerAsync(username, password, ucid, lagerdata);
-        }
-        
-        public string InsertCarPreSalesmaintenanceStandard(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata)
-        {
-            return base.Channel.InsertCarPreSalesmaintenanceStandard(username, password, ucid, standarddata);
         }
         
         public System.Threading.Tasks.Task<string> InsertCarPreSalesmaintenanceStandardAsync(string username, string password, string ucid, ServiceReference1.CarPreSalesMaintenaceStandardData standarddata)
@@ -2016,14 +2352,14 @@ namespace ServiceReference1
             return base.Channel.InsertCarPreSalesmaintenanceStandardAsync(username, password, ucid, standarddata);
         }
         
-        public ServiceReference1.VehicleBrandData[] GetCompanyVehicleBrands(string username, string password, string ucid, int companyId)
-        {
-            return base.Channel.GetCompanyVehicleBrands(username, password, ucid, companyId);
-        }
-        
         public System.Threading.Tasks.Task<ServiceReference1.VehicleBrandData[]> GetCompanyVehicleBrandsAsync(string username, string password, string ucid, int companyId)
         {
             return base.Channel.GetCompanyVehicleBrandsAsync(username, password, ucid, companyId);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertQualityReportAsync(string username, string password, string ucid, ServiceReference1.QualityReportData data)
+        {
+            return base.Channel.InsertQualityReportAsync(username, password, ucid, data);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

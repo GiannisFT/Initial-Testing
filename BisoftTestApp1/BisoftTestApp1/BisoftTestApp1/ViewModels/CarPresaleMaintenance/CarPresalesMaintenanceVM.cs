@@ -13,6 +13,7 @@ using BisoftTestApp1.Classes;
 using BisoftTestApp1.Views;
 using BisoftTestApp1.ViewModels.Maintenance;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
 {
@@ -136,7 +137,7 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
                 cPM.MaintenanceFormId = row.MaintenanceFormId;
                 temp.Add(cPM);
             }
-            AllMaintenance = new ObservableCollection<CarPresalesMaintenance>(temp);
+           // AllMaintenance = new ObservableCollection<CarPresalesMaintenance>(temp.OrderBy(t => t.));
         }
 
         private bool CanTryGetCarPresalesMaintenance(object param)
@@ -188,5 +189,6 @@ namespace BisoftTestApp1.ViewModels.CarPresalesMaintenanceVM
             }
         }
         #endregion
+
     }
 }
